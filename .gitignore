@@ -1,0 +1,76 @@
+# Fichiers Python compilés
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Environnements virtuels
+venv/
+env/
+*.venv/
+
+# Configuration d'environnement
+.env
+*.env
+secrets.json
+
+# Fichiers SQL (éviter d'ajouter les dumps sensibles)
+*.sql
+*.sql.gz
+
+# Logs et fichiers temporaires
+logs/
+*.log
+*.out
+*.err
+debug.log
+nohup.out
+
+# Migrations Django cachées
+*/migrations/__pycache__/
+*/migrations/*.pyc
+*/migrations/*.pyo
+
+# Dépendances Python
+*.egg-info/
+dist/
+build/
+pip-log.txt
+
+# JetBrains IDE (PyCharm)
+.idea/
+
+# VS Code
+.vscode/
+
+# Fichiers de tests et rapports
+.coverage
+htmlcov/
+*.cover
+*.py,cover
+.tox/
+nosetests.xml
+coverage.xml
+*.mo
+*.pot
+test-reports/
+
+# Static & Media (si générés automatiquement)
+staticfiles/
+media/
+
+# Docker
+*.pid
+docker-compose.override.yml
+
+# Node.js (si utilisation de npm/yarn pour du frontend)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Gunicorn
+gunicorn_error.log
+
+# Système
+.DS_Store
+Thumbs.db
