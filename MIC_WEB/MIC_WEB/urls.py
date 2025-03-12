@@ -17,11 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.views.defaults import server_error
-
+from django.conf import settings
+from django.conf.urls.static import static 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
    # path('index', index, name="index"), 
     path('error/', server_error), 
     path('', include(("app.urls", "app"), "app"))
-]
+] + static(settings.STATIC_URL)

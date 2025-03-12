@@ -1,0 +1,114 @@
+/* Reset de base */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Mulish', sans-serif;
+    transition: 0.3s all ease-in-out;
+}
+
+/* Style du corps */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--beige);
+}
+
+/* Conteneur avec ombre */
+.shadow-wrap {
+    border-radius: 5px;
+    padding: 25px;
+    background-color: var(--lightest-blue);
+}
+
+/* Conteneur principal du formulaire */
+.form-wrap {
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Titre */
+.form-wrap h1 {
+    text-align: center;
+    color: var(--dark-blue);
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Style des éléments du formulaire */
+.form-wrap form * {
+    display: block;
+    width: 100%;
+}
+
+/* Style des labels */
+.input-group label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 26px;
+    color: var(--dark-blue);
+}
+
+/* Style des champs de texte */
+.input-group input {
+    padding: 16px 20px;  /* Augmenté pour plus de hauteur */
+    border-radius: 5px;
+    border: 1px solid #DAE1F5;
+    background: #FFF;
+    color: var(--dark-blue);
+    margin-bottom: 20px;
+    font-size: 16px;  /* Augmenté pour plus de lisibilité */
+    height: 50px;  /* Augmenté pour rendre le champ plus haut */
+}
+
+/* Style du bouton */
+.form-wrap button {
+    border-radius: 5px;
+    background: var(--medium-blue);
+    color: #FFF;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    padding: 12px 68px;
+    font-weight: 700;
+    border: 1px solid transparent;
+    margin-top: 30px;
+    line-height: 26px;
+}
+
+/* Liens d'inscription */
+.signup-link {
+    color: var(--medium-blue);
+    font-size: 15px;
+    margin-top: 20px;
+    text-align: center;
+    line-height: 25px;
+    display: block;
+    text-decoration: none;
+}
+
+/* Hover du lien d'inscription */
+.signup-link:hover {
+    text-decoration: underline;
+}
+
+/* Hover du bouton */
+.form-wrap button:hover {
+    background-color: #fff;
+    color: var(--medium-blue);
+    border-color: var(--medium-blue);
+}
+
+/* Palette de couleurs */
+:root {
+    --beige: #bee9e8;
+    --light-blue: #62b6cb;
+    --dark-blue: #1b4965;
+    --lightest-blue: #cae9ff;
+    --medium-blue: #5fa8d3;
+}
