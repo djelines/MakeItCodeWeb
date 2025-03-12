@@ -1,14 +1,106 @@
-{% load static %}
+<!--{% load static %} -->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <link rel="stylesheet" href="/MIC_WEB/MIC_WEB/static/css/styles.css">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="/node_modules/reveal.js/dist/reveal.css" />
+    <link rel="stylesheet" href="/node_modules/reveal.js/dist/theme/black.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
-    <h1>COUCOU</h1>
+    <div class="reveal">
+        <div class="slides">
+            <section class="!h-screen !flex items-center justify-center flex-col relative slow-animation" data-auto-animate>
+                <div data-id="bg" class="!rounded-full p-10 absolute right-0 top-20" style="background: #FF0066;"></div>
+                <h1 data-id="title" class="z-999 title !text-8xl whitespace-nowrap !font-extrabold w-full absolute" >Presentation de <br> Make It Code</h1>
+                <svg data-id="box" class="absolute" style="left: -30vw;" width="100%" height="100%" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#FF0066" d="M35.7,-33.7C50.1,-21.2,68.3,-10.6,70.4,2.1C72.5,14.8,58.4,29.6,44,39.3C29.6,49,14.8,53.7,0.3,53.4C-14.2,53.1,-28.5,47.9,-43.4,38.2C-58.3,28.5,-73.8,14.2,-78.4,-4.6C-82.9,-23.3,-76.5,-46.7,-61.6,-59.1C-46.7,-71.6,-23.3,-73.1,-6.4,-66.8C10.6,-60.4,21.2,-46.1,35.7,-33.7Z" transform="translate(100 100)"/>
+                </svg>
+            </section>
+
+            <section class="!h-screen !flex items-center justify-center relative slow-animation" data-auto-animate
+                     data-auto-animate-easing=
+                             "cubic-bezier(0.860, 0.000, 0.070, 1.000)">
+                <svg data-id="box" class="absolute" style="left: -35%;" width="100%" height="100%" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#FF0066" d="M35.7,-33.7C50.1,-21.2,68.3,-10.6,70.4,2.1C72.5,14.8,58.4,29.6,44,39.3C29.6,49,14.8,53.7,0.3,53.4C-14.2,53.1,-28.5,47.9,-43.4,38.2C-58.3,28.5,-73.8,14.2,-78.4,-4.6C-82.9,-23.3,-76.5,-46.7,-61.6,-59.1C-46.7,-71.6,-23.3,-73.1,-6.4,-66.8C10.6,-60.4,21.2,-46.1,35.7,-33.7Z" transform="translate(100 100)"/>
+                </svg>
+                <div data-id="bg" class="!rounded-full p-10 absolute" style="background: #FF0066; width: 400%; height: 400%"></div>
+
+
+                <h1 data-id="title" class="z-999 title !text-6xl !font-extrabold w-full absolute" style="top: 10vh !important;">Presentation de
+                    <br> Make It Code</h1>
+                <div class="fragment fade-in-then-out">
+                    <p class="sora font-bold !text-4xl !mb-16 !mt-16">L'equipe de Just'Goat</p>
+                    <div class="flex flex-wrap gap-6 justify-center">
+                        <div class="flex flex-col items-center">
+                            <img src="/MIC_WEB/MIC_WEB/static/personne.jpg" alt="" class="!m-0 inset-shadow-sm" style="max-width: 200px">
+                            <div class="w-full h-1 bg-indigo-500 shadow-lg shadow-indigo-500/50"></div>
+                            <h4 class="!text-xl w-full text-left !ml-12 !mb-0 !mt-5 sora">Mathys</h4>
+                            <p class="!text-lg w-full text-left !font-light !ml-12 !mt-0 sora">Développeur</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img src="/MIC_WEB/MIC_WEB/static/personne.jpg" alt="" class="!m-0 inset-shadow-sm" style="max-width: 200px">
+                            <div class="w-full h-1 bg-indigo-500 shadow-lg shadow-indigo-500/50"></div>
+                            <h4 class="!text-xl w-full text-left !ml-12 !mb-0 !mt-5 sora">Inès</h4>
+                            <p class="!text-lg w-full text-left !font-light !ml-12 !mt-0 sora">Développeur</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img src="/MIC_WEB/MIC_WEB/static/personne.jpg" alt="" class="!m-0 inset-shadow-sm" style="max-width: 200px">
+                            <div class="w-full h-1 bg-indigo-500 shadow-lg shadow-indigo-500/50"></div>
+                            <h4 class="!text-xl w-full text-left !ml-12 !mb-0 !mt-5 sora">Clément</h4>
+                            <p class="!text-lg w-full text-left !font-light !ml-12 !mt-0 sora">Développeur</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img src="/MIC_WEB/MIC_WEB/static/personne.jpg" alt="" class="!m-0 inset-shadow-sm" style="max-width: 200px">
+                            <div class="w-full h-1 bg-indigo-500 shadow-lg shadow-indigo-500/50"></div>
+                            <h4 class="!text-xl w-full text-left !ml-12 !mb-0 !mt-5 sora">Matéis</h4>
+                            <p class="!text-lg w-full text-left !font-light !ml-12 !mt-0 sora">Développeur
+                                <br> Scrum Master</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="fragment">
+
+                </div>
+            </section>
+
+            <section>
+            </section>
+
+            <section>
+                <h1 class="wheat !font-black !mb-20 roboto !text-8xl">Introduction</h1>
+                <h1 class="!font-bold roboto !text-6xl">Presentation de MIT</h1>
+                <h2 class="!font-medium !text-5xl">"Make It Code"</h2>
+                <p>Apprendre le développement en pratiquant</p>
+            </section>
+            <section data-auto-animate data-auto-animate-easing=
+                             "cubic-bezier(0.860, 0.000, 0.070, 1.000)">
+                <p class="absolute" style="left: 10px">Flutter</p>
+            </section>
+            <section data-auto-animate data-auto-animate-easing=
+                    "cubic-bezier(0.860, 0.000, 0.070, 1.000)">
+                <p class="absolute" style="left: 10px; top:30px">Flutter</p>
+            </section>
+        </div>
+    </div>
 </body>
+<script src="/node_modules/reveal.js/dist/reveal.js"></script>
+<script>
+    Reveal.initialize({
+        view: 'scroll',
+        scrollProgress: true,
+        scrollLayout: 'full'
+    });
+</script>
 </html>
