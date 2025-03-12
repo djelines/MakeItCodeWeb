@@ -1,20 +1,16 @@
-<!--{% load static %} -->
-
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/MIC_WEB/MIC_WEB/static/css/styles.css">
+    <link rel="stylesheet" href="{% static 'css/style_index.css' %}">
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="/node_modules/reveal.js/dist/reveal.css" />
-    <link rel="stylesheet" href="/node_modules/reveal.js/dist/theme/black.css" />
+    <link rel="stylesheet" href="{% static 'node_modules/reveal.js/dist/reveal.css' %}" />
+    <link rel="stylesheet" href="{% static 'node_modules/reveal.js/dist/theme/black.css' %}" />
+    <script src="{% static 'node_modules/reveal.js/dist/reveal.js' %}"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
@@ -91,16 +87,18 @@
             <section data-auto-animate data-auto-animate-easing=
                     "cubic-bezier(0.860, 0.000, 0.070, 1.000)">
                 <p class="absolute" style="left: 10px; top:30px">Flutter</p>
+                <form method="post" action="{% url 'app:logout' %}">
+                    {% csrf_token %}
+                    <button type="submit">logout</button>
+                </form>
             </section>
         </div>
     </div>
 </body>
-<script src="/node_modules/reveal.js/dist/reveal.js"></script>
 <script>
     Reveal.initialize({
         view: 'scroll',
         scrollProgress: true,
-        scrollLayout: 'full'
     });
 </script>
 </html>

@@ -56,7 +56,10 @@ ROOT_URLCONF = 'MIC_WEB.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, "MIC_WEB/templates")],
+        'DIRS': [
+            os.path.join(BASE_DIR, "MIC_WEB", "templates"),  # 📂 Ajoute MIC_WEB/templates
+            os.path.join(BASE_DIR, "app", "templates"),  # 📂 Ajoute app/templates
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -105,7 +108,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'fr'
 
 TIME_ZONE = 'UTC'
 
@@ -119,7 +122,16 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+STATICFILES_DIRS = [
+    BASE_DIR / "app/static",    # Dossier statique de ton app principale
+    BASE_DIR / "MIC_WEB/static",  # Dossier statique pour MIC_WEB
+]
+
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_REDIRECT_URL = "app:home"
+LOGOUT_REDIRECT_URL = "app:login"
