@@ -625,6 +625,18 @@ body {
   font-family: "Noto Sans", sans-serif !important;
 }
 
+.barlow{
+  font-family: "Barlow", sans-serif !important;
+}
+
+.archivo{
+  font-family: "Archivo", sans-serif !important;
+}
+
+.monomaniac{
+  font-family: "Monomaniac One", sans-serif !important;
+}
+
 .wheat{
   color: wheat !important;
 }
@@ -638,9 +650,25 @@ body {
 }
 
 .title {
+  text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.6) ;
   transition: font-size 1s ease;
 }
 
 .border-color-pink{
   border-color: #eea2ac !important;
 }
+
+.bandeau{
+  width: 120px;
+  height: 300px;
+  position: absolute;
+  transform: rotate(45deg);
+  background: linear-gradient(to bottom, #196be4, transparent);
+}
+
+.big-round-circle-empty-center{
+  background: transparent;
+  border-color: #2B59C3FF;
+  border-width: 15rem;
+}
+
