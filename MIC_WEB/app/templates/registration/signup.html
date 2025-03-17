@@ -4,20 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign in</title>
+    <title>Make It Code - Accueil</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div class="shadow-wrap">
-        <div class="form-wrap">
-            <h1>Inscription</h1>
-            <form method="POST">
-                {% csrf_token %}
-                {{ form }}
-                <button type="submit">Envoyer</button>
-                <p>Déjà un compte ? <br><a href="{% url 'app:login' %}">Se connecter ici</a></p>
-            </form>
+    <header>
+        <img src="{% static 'logo.png' %}" alt="Logo Make It Code" class="logo">
+        <h1>Make It Code : Entrez dans l'Univers du Code</h1>
+        
+    </header>
+    <main>
+        <h3><i class="fa-solid fa-user-lock"></i> Présentation réservée aux membres inscrits</h3>
+        <div class="shadow-wrap">
+            <div class="form-wrap">
+                <h1><i class="fa-solid fa-user"></i> Inscription</h1>
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ form }}
+                    <button type="submit"><i class="fa-solid fa-paper-plane"></i> Envoyer</button>
+                    <p class="signup-link">Déjà un compte ?<a href="{% url 'app:login' %}"> Se connecter ici</a></p>
+                </form>
+            </div>
         </div>
-    </div>
+    </main>
 </body>
 </html>

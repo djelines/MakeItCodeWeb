@@ -6,15 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign in</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
 </head>
 <body>
-    <div class="shadow-wrap">
+    <header>
+        <img src="{% static 'logo.png' %}" alt="Logo Make It Code" class="logo">
+        <h1>Make It Code : Entrez dans l'Univers du Code</h1>
+        
+    </header>
+    <h2><i class="fa-solid fa-laptop-code"></i> Découvrez Make It Code</h2>
+        <p class="intro">Une plateforme gamifiée pour apprendre à coder tout en s'amusant.</p>
+        
+    <div class="shadow-wrap2">
         <div class="form-wrap">
             <h1>Connexion</h1>
             <form method="POST">
                 {% csrf_token %}
                 {{ form }}
-                <button type="submit">Envoyer</button>
+                <button type="submit"><i class="fa-solid fa-paper-plane"></i> Envoyer</button>
                 <p class="signup-link">Pas de compte ? <br><a href="{% url 'app:authView' %}">S'inscrire ici</a></p>
             </form>
         </div>

@@ -1,6 +1,5 @@
 /* Reset de base */
 * {
-    padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Mulish', sans-serif;
@@ -9,15 +8,64 @@
 
 /* Style du corps */
 body {
-    display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: var(--beige);
+    /*background-color: var(--dark-blue);*/
+    background: linear-gradient(90deg, #0f03519b, #5e397891, #0f03519b);
 }
+
+header {
+    display: flex;
+    align-items: center; /* Aligne verticalement */
+    gap: 10px; /* Espacement entre le logo et le texte */
+    justify-content: center;
+    background: linear-gradient(90deg, #DAE1F5, #DAE1F5, #DAE1F5);
+    box-shadow: 1px 2px 15px rgb(48, 44, 50);
+}
+
+.logo {
+    height: 100px; /* Ajuste la taille du logo */
+    width: auto;
+}
+.intro{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #f2e9e4;
+    margin-bottom: 20px;
+}
+
+h1,h2,h3{
+    text-align: center;
+    margin: 20px;
+}
+
+h1{
+    font-size: 30px;
+    color: #023047;
+}
+
+h2,h3{
+    color: #f2e9e4;
+}
+
 
 /* Conteneur avec ombre */
 .shadow-wrap {
+    max-width: 700px;
+    display: block;
+    margin: auto;
+    border-radius: 5px;
+    padding: 25px;
+    background-color: var(--lightest-blue);
+}
+
+/* Conteneur avec ombre */
+.shadow-wrap2 {
+   max-width: 350px;
+    display: flex;
+    margin: auto;
     border-radius: 5px;
     padding: 25px;
     background-color: var(--lightest-blue);
@@ -92,10 +140,7 @@ body {
     text-decoration: none;
 }
 
-/* Hover du lien d'inscription */
-.signup-link:hover {
-    text-decoration: underline;
-}
+
 
 /* Hover du bouton */
 .form-wrap button:hover {
