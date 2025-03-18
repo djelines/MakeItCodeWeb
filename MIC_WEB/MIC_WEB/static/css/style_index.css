@@ -637,12 +637,20 @@ body {
   font-family: "Monomaniac One", sans-serif !important;
 }
 
+.font-p{
+  font-family: 'Core Bandi Face W01 Regular' !important;
+}
+
+.rubik{
+  font-family: 'Rubik One' !important;
+}
+
 .wheat{
   color: wheat !important;
 }
 
 *{
-  color: #fffdf5 !important;
+  color: #fffdf5;
 }
 
 .slow-animation[data-auto-animate] {
@@ -658,17 +666,27 @@ body {
   border-color: #eea2ac !important;
 }
 
-.bandeau{
-  width: 120px;
-  height: 300px;
-  position: absolute;
-  transform: rotate(45deg);
-  background: linear-gradient(to bottom, #196be4, transparent);
+.hexagon{
+  width: 270px;
 }
 
-.big-round-circle-empty-center{
-  background: transparent;
-  border-color: #2B59C3FF;
-  border-width: 15rem;
+@keyframes floating {
+  0% {
+      transform: translateY(0px);
+  }
+  40% {
+      transform: translateY(-8px);
+  }
+  85%{
+    transform: translateY(1px);
+  }
+  100% {
+      transform: translateY(0px);
+  }
 }
+
+.floating {
+  animation: floating 3s ease-in-out infinite;
+}
+
 

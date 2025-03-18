@@ -1,25 +1,28 @@
-{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/style_index.css' %}">
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="{% static 'node_modules/reveal.js/dist/reveal.css' %}" />
-    <link rel="stylesheet" href="{% static 'node_modules/reveal.js/dist/theme/black.css' %}" />
-    <script src="{% static 'node_modules/reveal.js/dist/reveal.js' %}"></script>
+    <link rel="stylesheet" href="/MIC_WEB/MIC_WEB/static/css/style_index.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="/MIC_WEB/MIC_WEB/static/node_modules/reveal.js/dist/reveal.css" />
+    <link rel="stylesheet" href="/MIC_WEB/MIC_WEB/static/node_modules/reveal.js/dist/theme/white.css" />
+    <script src="/MIC_WEB/MIC_WEB/static/node_modules/reveal.js/dist/reveal.js"></script>
+    <script src="/MIC_WEB/MIC_WEB/static/node_modules/reveal.js/plugin/highlight/highlight.js"></script>
+    <link rel="stylesheet" href="/MIC_WEB/MIC_WEB/static/node_modules/reveal.js/plugin/highlight/shades-of-purple.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://db.onlinewebfonts.com/c/ca79adee43dfd2eb108269be7a4a7ded?family=Core+Bandi+Face+W01+Regular" rel="stylesheet">
     <script src="https://kit.fontawesome.com/9738b737cc.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Monomaniac+One&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/rubik-one" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Archivo:ital,wght@0,100..900;1,100..900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Monomaniac+One&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="reveal">
         <div class="slides">
-            <section data-background-gradient="linear-gradient(to bottom, #e9f0f1, #8ecae6)"
-                     class="!h-screen !flex items-center justify-center flex-col relative slow-animation"
-                     data-auto-animate>
+            <section data-background-gradient="linear-gradient(to bottom, #fff, #85abff)"
+                     class="!h-screen !flex items-center justify-center flex-col relative slow-animation">
 
                 <!-- <div data-id="bg" class="!rounded-full p-10 absolute right-0 top-20" style="background: #023047;"></div> -->
 
@@ -30,18 +33,22 @@
                     <path fill="#2B59C3FF" d="M58.2,-18.1C62.8,-4.8,45.2,16.6,28.8,25C12.5,33.4,-2.5,28.8,-14.3,20.1C-26.1,11.5,-34.5,-1.2,-31.6,-12.3C-28.7,-23.3,-14.3,-32.6,6.2,-34.6C26.8,-36.6,53.6,-31.4,58.2,-18.1Z" transform="translate(100 100)" />
                 </svg>
 
-                <div class="absolute top-10 left-0 flex items-center justify-center">
+                <img class="absolute hexagon" style="top: 15px; left: -12vw;" src="/MIC_WEB/MIC_WEB/static/hexagon.png" alt="">
+
+                <img class="absolute hexagon" style="bottom: 2vh; right: -13vw; transform: rotate(0.5turn) scaleX(-1) !important;" src="/MIC_WEB/MIC_WEB/static/circuit.png" alt="">
+
+                <!--<div class="absolute top-10 left-0 flex items-center justify-center">
                     <div class="rounded-full px-2 py-2" style="background: #1e4684">
                         <img src="{% static 'monitor.png' %}" alt="" class="!m-0" style="width: 13px;">
                     </div>
                     <p class="archivo !font-bold !text-lg" style="color: #063050 !important">Just'Goat</p>
-                </div>
+                </div>-->
 
                 <h1 class="z-999 title archivo !text-7xl whitespace-nowrap !font-black
                  w-full" style="color: #063050 !important;">Présentation</h1>
 
 
-                <div data-id="title-bg" class="absolute" style="width: 3000%; top: 24.3rem; !important; background: #2B59C3FF; height: 6rem"></div>
+                <div data-id="title-bg" class="absolute" style="width: 3000%; top: 24rem; background: #2B59C3FF; height: 6rem"></div>
 
                 <h2 data-id="title" class="z-999 title archivo !text-6xl whitespace-nowrap
                 !font-black py-3 !m-0"
@@ -50,32 +57,28 @@
                     Make It Code
                 </h2>
 
-                <p class="!m-0 !mt-3 sora !text-2xl !font-bold" style="color: #063050 !important;">“Apprendre le développement en pratiquant”</p>
+                <p class="!m-0 !mt-3 font-p !text-2xl !font-bold" style="color: #063050 !important;">“Apprendre le développement en pratiquant”</p>
 
             </section>
 
 
-            <section data-background-gradient="linear-gradient(to bottom, #e9f0f1, #8ecae6)"
-                     class="!h-screen !flex items-center py-16 flex-col relative slow-animation" data-auto-animate
-                     data-auto-animate-easing=
-                             "cubic-bezier(0.860, 0.000, 0.070, 1.000)">
+            <section data-background-gradient="linear-gradient(to top, #fff, #85abff)"
+                     class="!h-screen !flex items-center py-16 flex-col relative slow-animation">
 
 
-                <div data-id="bg" class="!rounded-full  p-10 absolute right-0 top-20" style="background: #2B59C3FF;"></div>
+                <!--<div data-id="bg" class="!rounded-full  p-10 absolute right-0 top-20" style="background: #2B59C3FF;"></div>-->
 
 
-                <svg data-id="blob" class="absolute" style="left: -90vw; bottom: -60vh;" width="150vw" height="150vh" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <svg data-id="blob" class="absolute" style="left: -70vw; top: -70vh;" width="150%" height="150%" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                     <path fill="#2B59C3FF" d="M58.2,-18.1C62.8,-4.8,45.2,16.6,28.8,25C12.5,33.4,-2.5,28.8,-14.3,20.1C-26.1,11.5,-34.5,-1.2,-31.6,-12.3C-28.7,-23.3,-14.3,-32.6,6.2,-34.6C26.8,-36.6,53.6,-31.4,58.2,-18.1Z" transform="translate(100 100)" />
                 </svg>
 
-                <div data-id="title-bg" class="absolute" style="width: 0.1%; top: 25.5rem; !important;
+                <div data-id="title-bg" class="absolute" style="width: 0.1%; top: 25.5rem;
                 background: rgba(43,89,195,0); height: 6rem"></div>
 
-                <div data-id="band" class="bandeau" style="
-                      top: -20px;
-                      right: -20px;
-                       height: 1px;"
-                ></div>
+
+
+                <img class="absolute hexagon" style="bottom: 15px; left: -15vw; transform: rotate(0.5turn) scaleX(-1) !important;" src="/MIC_WEB/MIC_WEB/static/hexagon.png" alt="">
 
 
                 <!--<div data-id="bg" class="!rounded-full p-10 absolute" style="background: #023047; width: 400%; height: 400%"></div>-->
@@ -84,100 +87,673 @@
                 <h2 data-id="title" class="z-999 title archivo !text-6xl whitespace-nowrap
                 !font-black py-3"
                     style="color: #063050 !important;">
-                    Make It Code
+                    L'équipe <span class="relative before:w-full before:h-8 before:-z-1 before:bottom-0
+                    before:absolute before:bg-blue-400" style="color: #063050 !important;">Just'Goat</span>
                 </h2>
 
 
-                <div class="fragment fade-in-then-out absolute" style="top:20vh;">
-                    <p class="sora font-bold !text-4xl !mb-10 !mt-0" style="color: #063050 !important;">L'équipe de Just'Goat</p>
+                <div class="absolute" style="top:20vh;">
+                    <p class="font-p font-bold !text-3xl !mb-10 !mt-0" style="color: #063050 !important;">Une approche révolutionnaire
+                        pour apprendre à coder
+                    </p>
                     <div class="flex flex-wrap gap-6 justify-center">
                         <div class="flex flex-col items-center">
-                            <img src="/MIC_WEB/MIC_WEB/static/personne.jpg" alt="" class="!m-0 inset-shadow-sm" style="max-width: 200px">
+                            <img src="/MIC_WEB/MIC_WEB/static/personne.jpg" alt="" class="!m-0 inset-shadow-sm floating" style="max-width: 200px">
                             <div class="w-full h-1 bg-indigo-500 shadow-lg shadow-indigo-500/50"></div>
-                            <h4 class="!text-xl w-full text-left !ml-12 !mb-0 !mt-5 !tracking-widest monomaniac"
+                            <h4 class="!text-2xl w-full text-left !ml-12 !mb-0 !mt-5 font-p"
                                 style="color: #063050 !important;">Mathys</h4>
-                            <p class="!text-lg w-full text-left !font-light !ml-12 !mt-0 monomaniac"
+                            <p class="!text-xl w-full text-left !font-light !ml-12 !mt-0 font-p"
                                style="color: #063050 !important;">Développeur</p>
                         </div>
                         <div class="flex flex-col items-center">
-                            <img src="/MIC_WEB/MIC_WEB/static/personne.jpg" alt="" class="!m-0 inset-shadow-sm" style="max-width: 200px">
+                            <img src="/MIC_WEB/MIC_WEB/static/personne.jpg" alt="" class="!m-0 inset-shadow-sm floating" style="max-width: 200px">
                             <div class="w-full h-1 bg-indigo-500 shadow-lg shadow-indigo-500/50"></div>
-                            <h4 class="!text-xl w-full text-left !ml-12 !mb-0 !mt-5 !tracking-widest monomaniac"
+                            <h4 class="!text-2xl w-full text-left !ml-12 !mb-0 !mt-5 font-p"
                                 style="color: #063050 !important;">Inès</h4>
-                            <p class="!text-lg w-full text-left !font-light !ml-12 !mt-0 monomaniac"
+                            <p class="!text-xl w-full text-left !font-light !ml-12 !mt-0 font-p"
                                style="color: #063050 !important;">Développeur</p>
                         </div>
                         <div class="flex flex-col items-center">
-                            <img src="/MIC_WEB/MIC_WEB/static/personne.jpg" alt="" class="!m-0 inset-shadow-sm" style="max-width: 200px">
+                            <img src="/MIC_WEB/MIC_WEB/static/personne.jpg" alt="" class="!m-0 inset-shadow-sm floating" style="max-width: 200px">
                             <div class="w-full h-1 bg-indigo-500 shadow-lg shadow-indigo-500/50"></div>
-                            <h4 class="!text-xl w-full text-left !ml-12 !mb-0 !mt-5 !tracking-widest monomaniac"
+                            <h4 class="!text-2xl w-full text-left !ml-12 !mb-0 !mt-5 font-p"
                                 style="color: #063050 !important;">Clément</h4>
-                            <p class="!text-lg w-full text-left !font-light !ml-12 !mt-0 monomaniac"
+                            <p class="!text-xl w-full text-left !font-light !ml-12 !mt-0 font-p"
                                style="color: #063050 !important;">Développeur</p>
                         </div>
                         <div class="flex flex-col items-center">
-                            <img src="/MIC_WEB/MIC_WEB/static/personne.jpg" alt="" class="!m-0 inset-shadow-sm" style="max-width: 200px">
+                            <img src="/MIC_WEB/MIC_WEB/static/personne.jpg" alt="" class="!m-0 inset-shadow-sm floating" style="max-width: 200px">
                             <div class="w-full h-1 bg-indigo-500 shadow-lg shadow-indigo-500/50"></div>
-                            <h4 class="!text-xl w-full text-left !ml-12 !mb-0 !mt-5 !tracking-widest monomaniac"
+                            <h4 class="!text-2xl w-full text-left !ml-12 !mb-0 !mt-5 font-p"
                                 style="color: #063050 !important;">Matéis</h4>
-                            <p class="!text-lg w-full text-left !font-light !ml-12 !mt-0 monomaniac"
+                            <p class="!text-xl w-full text-left !font-light !ml-12 !mt-0 font-p"
                                style="color: #063050 !important;">Développeur
                                 <br> Scrum Master</p>
                         </div>
                     </div>
                 </div>
-                <div class="fragment">
-                    <p class="sora font-bold !text-4xl !mb-10 !mt-0" style="color: #063050 !important;">Pourquoi cette application?</p>
-                    <p class="sora !text-2xl" style="color: #063050 !important;">Pour apprendre à coder avec des projets concrets et oublier la théorie classique.</p>
-                    <img class="absolute z-999" style="right: -7vw; bottom: 3vh;" src="{% static 'robot.png' %}" alt="">
-                </div>
+
+
             </section>
 
-            <section data-background-gradient="linear-gradient(to top, #e9f0f1, #8ecae6)"
+            <section data-background-gradient="linear-gradient(to bottom, #fff, #85abff)"
                      class="!h-screen !flex items-center py-16 flex-col relative slow-animation">
 
-                <div data-id="bg" class="!rounded-full p-10 absolute right-0 bottom-30" style="background: #2B59C3FF;">
-                </div>
+                <!--<div data-id="bg" class="!rounded-full p-10 absolute right-0 bottom-30" style="background: #2B59C3FF;">
+                </div>-->
+
+                <img class="absolute hexagon" style="top: 15px; left: -15vw;" src="/MIC_WEB/MIC_WEB/static/hexagon.png" alt="">
 
 
-                <!--<img class="absolute z-999 top-0" style="right: 2vw;" src="{% static 'phone.png' %}" alt="">-->
+                <img class="absolute" style="bottom: -120px; left: -6vw; width: 550px; transform: rotate(-10deg);" src="/MIC_WEB/MIC_WEB/static/phoneBg.png" alt="">
 
-                <svg data-id="blob" class="absolute" style="left: -90vw; top: -78.2vh" width="150vw" height="150vh" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <path fill="#2B59C3FF" d="M58.2,-18.1C62.8,-4.8,45.2,16.6,28.8,25C12.5,33.4,-2.5,28.8,-14.3,20.1C-26.1,11.5,-34.5,-1.2,-31.6,-12.3C-28.7,-23.3,-14.3,-32.6,6.2,-34.6C26.8,-36.6,53.6,-31.4,58.2,-18.1Z" transform="translate(100 100)" />
-                </svg>
 
                 <h2 data-id="title" class="z-999 title archivo !text-5xl whitespace-nowrap
                 !font-black py-3 w-full" style="margin-top: 30px !important; color: #063050 !important;">
-                    Les Technologies
+                    Technologies & Organisations
                 </h2>
 
+                <div class="absolute" style="top: 20vh;">                    
+                    <p class="font-p font-bold !text-3xl !mb-10 !mt-0" style="color: #063050 !important;">Flutter & Agile : Un Combo
+                        gagnant pour un développement efficace
+                    </p>
+            </div>
 
-                <div class="absolute left-20 top-50">
+            <svg class="absolute" style="right: -36vw; bottom: -50vh;" width="100%" height="100%" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#2B59C3FF" d="M42.4,-75.9C54,-66.8,61.6,-53.4,58.8,-40C55.9,-26.7,42.5,-13.3,40.6,-1.1C38.7,11.1,48.3,22.3,50.1,33.8C51.9,45.3,45.9,57.3,36.3,67.6C26.6,77.9,13.3,86.6,1.1,84.6C-11,82.7,-22,70,-26.8,56.8C-31.5,43.6,-29.9,30,-36.8,20.4C-43.8,10.9,-59.3,5.4,-68.6,-5.3C-77.8,-16.1,-80.8,-32.3,-72.4,-39.3C-64,-46.4,-44.3,-44.4,-30.3,-52.1C-16.3,-59.7,-8.2,-77.1,3.6,-83.4C15.4,-89.7,30.9,-85,42.4,-75.9Z" transform="translate(100 100)" />
+              </svg>
+
+
+                <div class="absolute right-20 top-50 flex gap-8 items-center">
                     <div class="flex flex-col items-center gap-4 justify-center">
-                        <img src="{% static 'flutter.png' %}" alt="" style="max-width: 40px">
-                        <!--<p class="sora !text-3xl !font-bold" style="color: #063050 !important;">Flutter</p>-->
-                        <div class="flex gap-4 items-center justify-center">
-                            <div class="px-3 py-3 max-w-4 max-h-4" style="background: #4f9ff5"></div>
-                            <p class="sora !text-2xl !font-bold !m-0" style="color: #063050 !important;">Flutter</p>
-                        </div>
+                        <img class="!mb-0" src="/MIC_WEB/MIC_WEB/static/flutter.png" alt="" style="max-width: 90px">
+                        <p class="font-p !text-3xl !font-bold !m-0 px-2 rounded" style="color: #fff !important;
+                            background: rgb(0, 74, 173, 0.21)">Flutter</p>
                     </div>
+                    <div class="flex flex-col items-center gap-4 justify-center">
+                        <img class="!mb-0" src="/MIC_WEB/MIC_WEB/static/dart.png" alt="" style="max-width: 90px">
+                        <p class="font-p !text-3xl !font-bold !m-0 px-2 rounded" style="color: #fff !important;
+                            background: rgb(0, 74, 173, 0.21)">Dart</p>
+                    </div>
+                    <div class="flex flex-col items-center gap-4 justify-center">
+                        <img class="!mb-0" src="/MIC_WEB/MIC_WEB/static/rive.png" alt="" style="max-width: 90px">
+                        <p class="font-p !text-3xl !font-bold !m-0 px-2 rounded" style="color: #fff !important;
+                            background: rgb(0, 74, 173, 0.21)">Rive</p>
+                    </div>
+                    <div class="flex flex-col items-center gap-4 justify-center">
+                        <img class="!mb-0" src="/MIC_WEB/MIC_WEB/static/trello.png" alt="" style="max-width: 90px">
+                        <p class="font-p !text-3xl !font-bold !m-0 px-2 rounded" style="color: #fff !important;
+                            background: rgb(0, 74, 173, 0.21)">Trello</p>
+                    </div>
+                    <div class="flex flex-col items-center gap-4 justify-center">
+                        <img class="!mb-0" src="/MIC_WEB/MIC_WEB/static/github.png" alt="" style="max-width: 90px">
+                        <p class="font-p !text-3xl !font-bold !m-0 px-2 rounded" style="color: #fff !important;
+                            background: rgb(0, 74, 173, 0.21)">GitHub</p>
+                    </div>
+                </div>
+
+                <div class="absolute -right-10 top-100 flex flex-col items-center">
+                    <div class="flex gap-4 items-center">
+                        <p class="font-p !text-2xl text-left w-180" style="color: #063050 !important;">
+                            📆 Planification sur 6 mois → Étapes clés du projet définies
+                        </p>
+                    </div>
+                    <div class="flex gap-4 items-center">
+                        <p class="font-p !text-2xl text-left w-180" style="color: #063050 !important;">
+                            📌 Gestion des tâches sur Trello → Suivi structuré des tâches
+                        </p>
+                    </div>
+                    <div class="flex gap-4 items-center">
+                        <p class="font-p !text-2xl text-left w-180" style="color: #063050 !important;">
+                            🛠 Développement collaboratif sur Git → Gestion de version et collaboration
+                        </p>
+                    </div>
+                    <div class="flex gap-4 items-center">
+                        <p class="font-p !text-2xl text-left w-180" style="color: #063050 !important;">
+                            🎓 Formation sur Udemy → Apprentissage progressif de Flutter
+                        </p>
+                    </div>                    
                 </div>
 
             </section>
 
-            <section data-background-gradient="linear-gradient(to bottom, #e9f0f1, #8ecae6)" data-auto-animate
-                     class="!h-screen !flex items-center py-16 flex-col relative slow-animation">
+            <section data-background-gradient="linear-gradient(to top, #fff, #85abff)"
+            class="!h-screen !flex items-center py-16 flex-col relative slow-animation">
+
+            <img class="absolute" style="top: -384px; left: -6vw; width: 550px; transform: rotate(-10deg);" src="/MIC_WEB/MIC_WEB/static/phoneBg.png" alt="">
 
 
+            <svg class="absolute" style="right: -36vw; top: -39.7vh;" width="100%" height="100%" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#2B59C3FF" d="M42.4,-75.9C54,-66.8,61.6,-53.4,58.8,-40C55.9,-26.7,42.5,-13.3,40.6,-1.1C38.7,11.1,48.3,22.3,50.1,33.8C51.9,45.3,45.9,57.3,36.3,67.6C26.6,77.9,13.3,86.6,1.1,84.6C-11,82.7,-22,70,-26.8,56.8C-31.5,43.6,-29.9,30,-36.8,20.4C-43.8,10.9,-59.3,5.4,-68.6,-5.3C-77.8,-16.1,-80.8,-32.3,-72.4,-39.3C-64,-46.4,-44.3,-44.4,-30.3,-52.1C-16.3,-59.7,-8.2,-77.1,3.6,-83.4C15.4,-89.7,30.9,-85,42.4,-75.9Z" transform="translate(100 100)" />
+              </svg>
+
+              <h2 data-id="title" class="z-999 title archivo !text-7xl
+              !font-black py-3 w-full" style="margin-top: 250px !important; color: #063050 !important;">
+                  Pourquoi notre solution?
+              </h2>
+
+
+            <img src="/MIC_WEB/MIC_WEB/static/circuit.png" alt="" class="absolute -z-999 -left-44 -bottom-46 !max-w-60">
+
+              <svg class="absolute" style="max-height: 310px; bottom: 35px; right: -120px;" xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="1000" height="1440.423384410393" viewBox="0 0 1000 1440.423384410393">
+                <line class="line-element" stroke="#4f9ff5" stroke-width="100" x1="0" y1="0" x2="2.634079244597716" y2="1426.923407412044"></line>
+            </svg>
 
             </section>
 
-            <section data-background-color="#bde0fe" class="!h-screen !flex items-center justify-center flex-col relative slow-animation" data-auto-animate>
-                <div data-id="bg" class="!rounded-full  p-10 absolute right-0 top-20" style="background: #023047;"></div>
-                <h1 data-id="title" class="z-999 title sora !text-8xl whitespace-nowrap !font-extrabold w-full absolute" >Presentation de <br> Make It Code</h1>
-                <svg data-id="box" class="absolute" style="left: -30vw;" width="100%" height="100%" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <path fill="#023047" d="M35.7,-33.7C50.1,-21.2,68.3,-10.6,70.4,2.1C72.5,14.8,58.4,29.6,44,39.3C29.6,49,14.8,53.7,0.3,53.4C-14.2,53.1,-28.5,47.9,-43.4,38.2C-58.3,28.5,-73.8,14.2,-78.4,-4.6C-82.9,-23.3,-76.5,-46.7,-61.6,-59.1C-46.7,-71.6,-23.3,-73.1,-6.4,-66.8C10.6,-60.4,21.2,-46.1,35.7,-33.7Z" transform="translate(100 100)"/>
-                </svg>
+            <section data-background-gradient="linear-gradient(to bottom, #fff, #85abff)"
+            class="!h-screen !flex items-center py-16 flex-col relative slow-animation">
+
+            <svg class="absolute" style="top: -50px; left: 423px;" width="100" height="400" viewBox="-50 -50 100 300" xmlns="http://www.w3.org/2000/svg">
+                <!-- Barre verticale (jusqu'à 250) -->
+                <path style="fill: none;" stroke="#4f9ff5" stroke-width="21.5" 
+                    d="M 0 -10 L 0 202" />
+                <!-- Pointe de la flèche -->
+                <path style="fill: none;" stroke="#4f9ff5" stroke-width="12" 
+                    d="M 20 190 L 0 210 L -20 190" />
+            </svg>
+            
+            <h2 class="font-p absolute top-64" style="color: #063050 !important;">Pour apprendre à coder avec des projets concrets et oublier la théorie classique</h2>
+            
+            <img src="/MIC_WEB/MIC_WEB/static/circuit.png" alt="" class="absolute -z-999 -left-44 -top-6 !max-w-60">
+
+            
+            <img src="/MIC_WEB/MIC_WEB/static/robot.png" alt="" class="absolute -z-999 -right-40 -bottom-0 !max-w-90">
+            
+
+            </section>
+
+
+            <section data-background-gradient="linear-gradient(to top, #fff, #85abff)"
+            class="has-light-background !h-screen !flex items-center py-16 flex-col relative slow-animation" data-auto-animate>
+
+            <h2 data-id="title" class="z-999 title archivo !text-5xl whitespace-nowrap
+            !font-black py-3 w-full" style="margin-top: 30px !important; color: #063050 !important;">
+            Découvrez les Écrans de l'App
+            </h2>
+
+            <img data-id="phone" id="vid-home" src="/MIC_WEB/MIC_WEB/static/phone.png" alt="" class="absolute z-999 !max-w-62 top-43">
+
+            <video data-id="home" src="/MIC_WEB/MIC_WEB/static/Vid.mov" class="absolute -z-999 !max-w-55 !max-h-112 top-50.5 rounded-xl"></video>
+
+
+            <img data-id="portfolio" src="/MIC_WEB/MIC_WEB/static/portfolio.png" alt="" class="absolute -z-999 !max-w-55 !max-h-100 top-52 right-30 rounded-xl">
+
+            <img data-id="globalChat" src="/MIC_WEB/MIC_WEB/static/globalChat.png" alt="" class="absolute -z-999 !max-w-55 !max-h-88 top-60 -right-23 rounded-xl">
+
+            <img data-id="code" src="/MIC_WEB/MIC_WEB/static/code.png" alt="" class="absolute -z-999 !max-w-55 !max-h-76 top-67 -right-70 rounded-xl">
+
+            <img data-id="code2" src="/MIC_WEB/MIC_WEB/static/code.png" alt="" class="absolute -z-999 !max-w-55 !max-h-76 top-67 -left-70 rounded-xl">
+
+
+            <img data-id="game2" src="/MIC_WEB/MIC_WEB/static/game.png" alt="" class="absolute -z-999 !max-w-55 !max-h-76 top-67 -right-130 rounded-xl">
+
+
+
+            <img data-id="settings" src="/MIC_WEB/MIC_WEB/static/settings.png" alt="" class="absolute -z-999 !max-w-55 !max-h-100 top-52 left-30 rounded-xl">
+
+            <img data-id="game" src="/MIC_WEB/MIC_WEB/static/game.png" alt="" class="absolute -z-999 !max-w-55 !max-h-88 top-60 -left-23 rounded-xl">
+
+            <h3 data-id="phone-title" class="font-p absolute bottom-20" style="color: #063050 !important;">Accueil</h3>
+
+            </section>
+
+            <section data-background-gradient="linear-gradient(to top, #fff, #85abff)"
+            class="has-light-background !h-screen !flex items-center py-16 flex-col relative slow-animation" data-auto-animate>
+
+            <img data-id="phone" id="vid-home" src="/MIC_WEB/MIC_WEB/static/phone.png" alt="" class="absolute z-999 !w-80 top-32">
+
+            <!--VIDEO DE L'ACCUEIL-->
+            <!--VIDEO DE L'ACCUEIL-->
+            <!--VIDEO DE L'ACCUEIL-->
+            <!--VIDEO DE L'ACCUEIL-->
+            <video data-id="home" src="/MIC_WEB/MIC_WEB/static/Vid.mov" class="absolute -z-900 !max-w-70 !max-h-145 top-40 rounded-3xl vid-home" data-autoplay></video>
+
+            <p class="absolute archivo bottom-20 right-10 !text-lg vid-home-text">Lecture</p>
+
+
+            <img data-id="portfolio" src="/MIC_WEB/MIC_WEB/static/portfolio.png" alt="" class="absolute -z-999 !max-w-55 !max-h-100 top-52 right-30 rounded-xl">
+
+            <img data-id="globalChat" src="/MIC_WEB/MIC_WEB/static/globalChat.png" alt="" class="absolute -z-999 !max-w-55 !max-h-88 top-60 -right-23 rounded-xl">
+
+            <img data-id="code" src="/MIC_WEB/MIC_WEB/static/code.png" alt="" class="absolute -z-999 !max-w-55 !max-h-76 top-67 -right-70 rounded-xl">
+
+            <img data-id="code2" src="/MIC_WEB/MIC_WEB/static/code.png" alt="" class="absolute -z-999 !max-w-55 !max-h-76 top-67 -left-70 rounded-xl">
+
+
+            <img data-id="game2" src="/MIC_WEB/MIC_WEB/static/game.png" alt="" class="absolute -z-999 !max-w-55 !max-h-76 top-67 -right-130 rounded-xl">
+
+
+
+            <img data-id="settings" src="/MIC_WEB/MIC_WEB/static/settings.png" alt="" class="absolute -z-999 !max-w-55 !max-h-100 top-52 left-30 rounded-xl">
+
+            <img data-id="game" src="/MIC_WEB/MIC_WEB/static/game.png" alt="" class="absolute -z-999 !max-w-55 !max-h-88 top-60 -left-23 rounded-xl">
+
+            <div class="absolute -z-950 !h-screen !w-screen !top-0" style="background: rgb(22, 25, 26, 0.9);"></div>
+
+            <h3 data-id="phone-title" class="font-p absolute top-20" style="color: #fff !important;">Accueil</h3>
+
+            </section>
+
+            <section data-background-gradient="linear-gradient(to top, #fff, #85abff)"
+            class="!h-screen !flex items-center py-16 flex-col relative slow-animation has-light-background" data-auto-animate>
+
+            <h2 data-id="title" class="z-999 title archivo !text-5xl whitespace-nowrap
+            !font-black py-3 w-full" style="margin-top: 30px !important; color: #063050 !important;">
+            Découvrez les Écrans de l'App
+            </h2>
+
+            <img data-id="phone" id="vid-home" src="/MIC_WEB/MIC_WEB/static/phone.png" alt="" class="absolute z-999 !max-w-62 top-43">
+            
+
+            <video data-id="home" src="/MIC_WEB/MIC_WEB/static/Vid.mov" class="absolute -z-999 !max-w-55 !max-h-100 top-58 left-30 rounded-xl"></video>
+        
+
+            <img data-id="portfolio" src="/MIC_WEB/MIC_WEB/static/portfolio.png" alt="" class="absolute -z-999 !max-w-55 !max-h-112 top-45.5 rounded-xl">
+
+            <img data-id="globalChat" src="/MIC_WEB/MIC_WEB/static/globalChat.png" alt="" class="absolute -z-999 !max-w-55 !max-h-100 top-52 right-30 rounded-xl">
+
+            <img data-id="code" src="/MIC_WEB/MIC_WEB/static/code.png" alt="" class="absolute -z-999 !max-w-55 !max-h-88 top-60 -right-23 rounded-xl">
+
+            <img data-id="code2" src="/MIC_WEB/MIC_WEB/static/code.png" alt="" class="absolute -z-999 !max-w-55 !max-h-76 top-67 -left-100 rounded-xl">
+
+            <img data-id="settings" src="/MIC_WEB/MIC_WEB/static/settings.png" alt="" class="absolute -z-999 !max-w-55 !max-h-88 top-60 -left-23 rounded-xl">
+
+            <img data-id="settings2" src="/MIC_WEB/MIC_WEB/static/settings.png" alt="" class="absolute -z-999 !max-w-55 !max-h-76 top-67 -right-130 rounded-xl">
+
+            <img data-id="game" src="/MIC_WEB/MIC_WEB/static/game.png" alt="" class="absolute -z-999 !max-w-55 !max-h-76 top-67 -left-70 rounded-xl">
+
+            <img data-id="game2" src="/MIC_WEB/MIC_WEB/static/game.png" alt="" class="absolute -z-999 !max-w-55 !max-h-76 top-67 -right-70 rounded-xl">
+
+            <h3 data-id="phone-title" class="font-p absolute bottom-20" style="color: #063050 !important;">Page de projet</h3>
+
+            </section>
+
+            <section data-background-gradient="linear-gradient(to top, #fff, #85abff)"
+            class="!h-screen !flex items-center py-16 flex-col relative slow-animation has-light-background" data-auto-animate>
+
+            <h2 data-id="title" class="z-999 title archivo !text-5xl whitespace-nowrap
+            !font-black py-3 w-full" style="margin-top: 30px !important; color: #063050 !important;">
+            Découvrez les Écrans de l'App
+            </h2>
+            <img data-id="phone" id="vid-home" src="/MIC_WEB/MIC_WEB/static/phone.png" alt="" class="absolute z-999 !max-w-62 top-43">
+        
+
+            <video data-id="home" src="/MIC_WEB/MIC_WEB/static/Vid.mov" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -left-23 rounded-xl"></video>
+
+
+            <video data-id="home2" src="/MIC_WEB/MIC_WEB/static/Vid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-130 rounded-xl"></video>
+
+            <img data-id="portfolio" src="/MIC_WEB/MIC_WEB/static/portfolio.png" alt="" class="absolute -z-999 !max-w-55 !max-h-100 top-52 left-30 rounded-xl">
+
+            <img data-id="globalChat" src="/MIC_WEB/MIC_WEB/static/globalChat.png" alt="" class="absolute -z-999 !max-w-55 !max-h-112 top-45.5 rounded-xl">
+
+            <img data-id="code" src="/MIC_WEB/MIC_WEB/static/code.png" alt="" class="absolute -z-999 !max-w-55 !max-h-100 top-52 right-30 rounded-xl">
+
+            <img data-id="code2" src="/MIC_WEB/MIC_WEB/static/code.png" alt="" class="absolute -z-999 !max-w-55 !max-h-76 top-67 -left-100 rounded-xl">
+
+            <img data-id="settings" src="/MIC_WEB/MIC_WEB/static/settings.png" alt="" class="absolute -z-999 !max-w-55 !max-h-76 top-67 -left-70 rounded-xl">
+
+            <img data-id="settings2" src="/MIC_WEB/MIC_WEB/static/settings.png" alt="" class="absolute -z-999 !max-w-55 !max-h-76 top-67 -right-70 rounded-xl">
+
+            <img data-id="game" src="/MIC_WEB/MIC_WEB/static/game.png" alt="" class="absolute -z-999 !max-w-55 !max-h-76 top-67 -left-100 rounded-xl">
+
+            <img data-id="game2" src="/MIC_WEB/MIC_WEB/static/game.png" alt="" class="absolute -z-999 !max-w-55 !max-h-88 top-60 -right-23 rounded-xl">
+
+            <h3 data-id="phone-title" class="font-p absolute bottom-20" style="color: #063050 !important;">Chat global</h3>
+
+            </section>
+
+            <section data-background-gradient="linear-gradient(to top, #fff, #85abff)"
+            class="!h-screen !flex items-center py-16 flex-col relative slow-animation has-light-background" data-auto-animate>
+
+            <h2 data-id="title" class="z-999 title archivo !text-5xl whitespace-nowrap
+            !font-black py-3 w-full" style="margin-top: 30px !important; color: #063050 !important;">
+            Découvrez les Écrans de l'App
+            </h2>
+
+            <img data-id="phone" id="vid-home" src="/MIC_WEB/MIC_WEB/static/phone.png" alt="" class="absolute z-999 !max-w-62 top-43">
+
+
+            <video data-id="home" src="/MIC_WEB/MIC_WEB/static/Vid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-70 rounded-xl"></video>
+
+
+            <video data-id="home2" src="/MIC_WEB/MIC_WEB/static/Vid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-70 rounded-xl"></video>
+
+
+
+            <img data-id="portfolio" src="/MIC_WEB/MIC_WEB/static/portfolio.png" alt="" class="absolute -z-999 !max-w-55 !max-h-88 top-60 -left-23 rounded-xl">
+
+            <img data-id="portfolio2" src="/MIC_WEB/MIC_WEB/static/portfolio.png" alt="" class="absolute -z-999 !max-w-55 !max-h-76 top-67 -right-130 rounded-xl">
+
+            <img data-id="globalChat" src="/MIC_WEB/MIC_WEB/static/globalChat.png" alt="" class="absolute -z-999 !max-w-55 !max-h-100 top-52 left-30 rounded-xl">
+
+            <img data-id="code" src="/MIC_WEB/MIC_WEB/static/code.png" alt="" class="absolute -z-999 !max-w-55 !max-h-112 top-45.5 rounded-xl">
+
+            <img data-id="settings" src="/MIC_WEB/MIC_WEB/static/settings.png" alt="" class="absolute -z-999 !max-w-55 !max-h-76 top-67 -left-100 rounded-xl">
+
+            <img data-id="settings2" src="/MIC_WEB/MIC_WEB/static/settings.png" alt="" class="absolute -z-999 !max-w-55 !max-h-88 top-60 -right-23 rounded-xl">
+
+            <img data-id="game" src="/MIC_WEB/MIC_WEB/static/game.png" alt="" class="absolute -z-999 !max-w-55 !max-h-76 top-67 -left-100 rounded-xl">
+
+            <img data-id="game2" src="/MIC_WEB/MIC_WEB/static/game.png" alt="" class="absolute -z-999 !max-w-55 !max-h-100 top-52 right-30 rounded-xl">
+
+            <h3 data-id="phone-title" class="font-p absolute bottom-20" style="color: #063050 !important;">Page de développement</h3>
+
+            </section>
+
+            <section data-background-gradient="linear-gradient(to top, #fff, #85abff)"
+            class="!h-screen !flex items-center py-16 flex-col relative slow-animation has-light-background" data-auto-animate>
+
+            <h2 data-id="title" class="z-999 title archivo !text-5xl whitespace-nowrap
+            !font-black py-3 w-full" style="margin-top: 30px !important; color: #063050 !important;">
+            Découvrez les Écrans de l'App
+            </h2>
+
+            <img data-id="phone" id="vid-home" src="/MIC_WEB/MIC_WEB/static/phone.png" alt="" class="absolute z-999 !max-w-62 top-43">
+            
+
+            <video data-id="home" src="/MIC_WEB/MIC_WEB/static/Vid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-130 rounded-xl"></video>
+
+            <video data-id="home2" src="/MIC_WEB/MIC_WEB/static/Vid.mov" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -right-23 rounded-xl"></video>
+
+            <img data-id="portfolio" src="/MIC_WEB/MIC_WEB/static/portfolio.png" alt="" class="absolute -z-999 !max-w-55 !max-h-76 top-67 -left-70 rounded-xl">
+
+            <img data-id="portfolio2" src="/MIC_WEB/MIC_WEB/static/portfolio.png" alt="" class="absolute -z-999 !max-w-55 !max-h-76 top-67 -right-70 rounded-xl">
+
+            <img data-id="globalChat" src="/MIC_WEB/MIC_WEB/static/globalChat.png" alt="" class="absolute -z-999 !max-w-55 !max-h-88 top-60 -left-23 rounded-xl">
+
+            <img data-id="globalChat2" src="/MIC_WEB/MIC_WEB/static/globalChat.png" alt="" class="absolute -z-999 !max-w-55 !max-h-76 top-67 -right-130 rounded-xl">
+
+            <img data-id="code" src="/MIC_WEB/MIC_WEB/static/code.png" alt="" class="absolute -z-999 !max-w-55 !max-h-100 top-52 left-30 rounded-xl">
+
+            <img data-id="settings" src="/MIC_WEB/MIC_WEB/static/settings.png" alt="" class="absolute -z-999 !max-w-55 !max-h-76 top-67 -left-100 rounded-xl">
+
+            <img data-id="settings2" src="/MIC_WEB/MIC_WEB/static/settings.png" alt="" class="absolute -z-999 !max-w-55 !max-h-100 top-52 right-30 rounded-xl">
+
+            <img data-id="game" src="/MIC_WEB/MIC_WEB/static/game.png" alt="" class="absolute -z-999 !max-w-55 !max-h-76 top-67 -left-100 rounded-xl">
+
+            <img data-id="game2" src="/MIC_WEB/MIC_WEB/static/game.png" alt="" class="absolute -z-999 !max-w-55 !max-h-112 top-45.5 rounded-xl">
+
+            <h3 data-id="phone-title" class="font-p absolute bottom-20" style="color: #063050 !important;">Page de jeux</h3>
+
+            </section>
+
+            <section data-background-gradient="linear-gradient(to top, #fff, #85abff)"
+            class="!h-screen !flex items-center py-16 flex-col relative slow-animation has-light-background" data-auto-animate>
+
+            <h2 data-id="title" class="z-999 title archivo !text-5xl whitespace-nowrap
+            !font-black py-3 w-full" style="margin-top: 30px !important; color: #063050 !important;">
+            Découvrez les Écrans de l'App
+            </h2>
+
+            <img data-id="phone" src="/MIC_WEB/MIC_WEB/static/phone.png" alt="" class="absolute z-999 !max-w-62 top-43">
+        
+
+            <video data-id="home" src="/MIC_WEB/MIC_WEB/static/Vid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-130 rounded-xl"></video>
+
+            <video data-id="home2" src="/MIC_WEB/MIC_WEB/static/Vid.mov" class="absolute -z-999 !max-w-55 !max-h-100 top-58 right-30 rounded-xl"></video>
+
+            <img data-id="portfolio" src="/MIC_WEB/MIC_WEB/static/portfolio.png" alt="" class="absolute -z-999 !max-w-55 !max-h-76 top-67 -left-70 rounded-xl">
+
+            <img data-id="portfolio2" src="/MIC_WEB/MIC_WEB/static/portfolio.png" alt="" class="absolute -z-999 !max-w-55 !max-h-88 top-60 -right-23 rounded-xl">
+
+            <img data-id="globalChat" src="/MIC_WEB/MIC_WEB/static/globalChat.png" alt="" class="absolute -z-999 !max-w-55 !max-h-76 top-67 -left-70 rounded-xl">
+
+            <img data-id="globalChat2" src="/MIC_WEB/MIC_WEB/static/globalChat.png" alt="" class="absolute -z-999 !max-w-55 !max-h-76 top-67 -right-70 rounded-xl">
+
+            <img data-id="code" src="/MIC_WEB/MIC_WEB/static/code.png" alt="" class="absolute -z-999 !max-w-55 !max-h-88 top-60 -left-23 rounded-xl">
+
+            <img data-id="settings" src="/MIC_WEB/MIC_WEB/static/settings.png" alt="" class="absolute -z-999 !max-w-55 !max-h-76 top-67 -left-100 rounded-xl">
+
+            <img data-id="settings2" src="/MIC_WEB/MIC_WEB/static/settings.png" alt="" class="absolute -z-999 !max-w-55 !max-h-112 top-45.5 rounded-xl">
+
+            <img data-id="game" src="/MIC_WEB/MIC_WEB/static/game.png" alt="" class="absolute -z-999 !max-w-55 !max-h-76 top-67 -left-100 rounded-xl">
+
+            <img data-id="game2" src="/MIC_WEB/MIC_WEB/static/game.png" alt="" class="absolute -z-999 !max-w-55 !max-h-100 top-52 left-30 rounded-xl">
+
+            <h3 data-id="phone-title" class="font-p absolute bottom-20" style="color: #063050 !important;">Paramètres</h3>
+
+            </section>
+
+            <section data-background-gradient="linear-gradient(to top, #fff, #85abff)"
+            class="!h-screen !flex items-center py-16 flex-col relative slow-animation has-light-background" data-auto-animate>
+
+            <h2 data-id="title" class="z-999 title font-p !text-3xl
+            !font-black py-3 w-full !mb-0" style="color: #063050 !important;">
+                Extraits de code de l’application, entre simplicité et puissance
+            </h2>
+
+            <div class="absolute flex items-center gap-3 z-999" style="top: 50%; left: 107%; transform: translate(-50%, -50%);" >
+                <p class="font-p font-bold !text-3xl !mb-0 !mt-0" style="color: #063050 !important;">Projets</p>
+                <img class="!max-w-15"  
+                src="/MIC_WEB/MIC_WEB/static/chevron.png" 
+                alt="">
+            </div>
+                   
+            <pre><code data-trim data-noescape data-id="codeExample" class="!text-xs !max-h-150 rounded-lg">
+                @override
+                Widget build(BuildContext context) {
+                  User? currentUser = FirebaseAuth.instance.currentUser;
+              
+                  return Scaffold(
+                    body: Stack(
+                      children: [
+                        Container(
+                          height: MediaQuery.of(context).size.height,
+                          decoration: BoxDecoration(
+                            gradient: RadialGradient(
+                              colors: [
+                                Color.fromRGBO(0, 113, 152, 1),
+                                Color.fromARGB(255, 11, 22, 44),
+                              ],
+                              stops: [0.1, 0.9],
+                              center: Alignment(-0.7, 0.7),
+                              radius: 0.8,
+                            ),
+                          ),
+                        ),
+                        SafeArea(
+                          child: SingleChildScrollView(
+                          child: 
+                          Padding(
+                            padding: const EdgeInsets.all(16.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                  Row(
+                                    children: [
+                                      _title(),
+                                      Spacer(),
+                                      _profilePicture()
+                                    ],
+                                  ),
+                                  SizedBox(height: 50,),
+                                  _playerLevel(),
+                                  SizedBox(height: 25,),
+                                  Row(
+                                    children: [
+                                      Text(
+                                        'LES PROJETS',
+                                        style: GoogleFonts.montserrat(
+                                          textStyle: TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.w800,
+                                            fontSize: 27
+                                          )
+                                        ),
+                                      ),
+                                      Spacer(),
+                                      TextButton(
+                                        onPressed: () {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) =>  ProjectsPage() //ProjectsPage(),
+                                            ),
+                                          );
+                                        }, 
+                                        child: Text(
+                                          'Tout voir',
+                                          style: GoogleFonts.montserrat(
+                                            textStyle: TextStyle(
+                                              color: Color(0xffC6C6C6)
+                                            )
+                                          ),
+                                        ))
+                                    ],
+                                  ),
+                                  SingleChildScrollView(
+                                    scrollDirection: Axis.horizontal,
+                                    child: 
+                                      Row(
+                                        children: [
+                                        _projects(_projectsStreamBegan),
+                                        SizedBox(width: 30,),
+                                        _projects(_projectsStreamUnlocked)
+                                        ],
+                                      ),
+                                  )
+                              ],
+                            ),
+                          ),
+                         ),
+                        ),
+                      ],
+                    ),
+                  );
+                }
+                  </code></pre>
+
+            </section>
+
+
+            <section data-background-gradient="linear-gradient(to top, #fff, #85abff)"
+            class="!h-screen !flex items-center py-16 flex-col relative slow-animation has-light-background" data-auto-animate>
+
+            <h2 data-id="title" class="z-999 title font-p !text-3xl
+            !font-black py-3 w-full !mb-0" style="color: #063050 !important;">
+                Extraits de code de l’application, entre simplicité et puissance
+            </h2>
+
+            <div class="absolute flex items-center gap-3 z-999" style="top: 50%; left: 107%; transform: translate(-50%, -50%);" >
+                <p class="font-p font-bold !text-3xl !mb-0 !mt-0" style="color: #063050 !important;">chat global</p>
+                <img class="!max-w-15" 
+                src="/MIC_WEB/MIC_WEB/static/chevron.png" 
+                alt="">
+            </div>
+                   
+            <pre><code data-trim data-noescape data-id="codeExample" class="!text-xs !max-h-150 rounded-lg">
+                @override
+                Widget build(BuildContext context) {
+                  return Scaffold(
+                    backgroundColor: Color.fromARGB(255, 11, 22, 44),
+                    body: Stack(
+                      children: [
+                        /// CONTENU PRINCIPAL CENTRÉ
+                        Center(
+                          child: Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 30), // Centrage horizontal
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center, // Centre le contenu verticalement
+                              children: [
+                                _title(),
+                                SizedBox(height: 10),
+                                _subTitle(),
+                                SizedBox(height: 20),
+                                _stepTitle(),
+                                SizedBox(height: 8),
+                                _stepDesc(),
+                                _xpAdded(),
+                                SizedBox(height: 10),
+                                _progressBar(),
+                                SizedBox(height: 40),
+                                _continueButton(),
+                              ],
+                            ),
+                          ),
+                        ),
+                
+                        /// BOUTON RETOUR POSITIONNÉ EN HAUT À DROITE
+                        Positioned(
+                          top: 40,  
+                          right: 20, 
+                          child: GestureDetector(
+                            onTap: () {
+                              Navigator.of(context).pop(); 
+                            },
+                            child: Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(40),
+                                border: Border.all(color: Color(0xffd4b394)),
+                                color: Colors.transparent, 
+                              ),
+                              padding: EdgeInsets.all(6),
+                              child: Icon(
+                                CupertinoIcons.clear,
+                                size: 24,
+                                color: Color(0xffd4b394),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  );
+                }
+                  </code></pre>
+
+            </section>
+
+
+            <section data-background-gradient="linear-gradient(to bottom, #fff, #85abff)"
+            class="!h-screen !flex items-center justify-center py-16 flex-col relative slow-animation has-light-background">
+
+            <h2 data-id="title" class="z-999 title rubik !text-8xl !w-screen whitespace-nowrap !mr-4
+            py-3" style="color: #f9fcff !important;
+            -webkit-text-stroke: 2.8px #004aad; 
+            letter-spacing: -7px !important;
+            color: #f9fcff;">
+                Le futur de<br>l’apprentissage<br>du code, entrez<br>dans l’aventure !
+            </h2>
+            
+
+
+
+            <svg class="absolute" style="bottom: -65vh; left: 23vw; width: 150%; height: 150%;" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#2B59C3FF" d="M31.9,-49.9C40.6,-50.1,46.6,-40.2,54.3,-30.2C62,-20.2,71.5,-10.1,74.5,1.8C77.6,13.7,74.3,27.3,63.3,31.7C52.4,36.2,33.9,31.4,22.1,28.3C10.2,25.2,5.1,23.9,-3.3,29.6C-11.7,35.2,-23.3,47.9,-35.9,51.4C-48.5,55,-62,49.3,-66.4,39.2C-70.7,29.1,-66,14.5,-63.5,1.4C-61,-11.7,-60.9,-23.4,-53.1,-27.6C-45.4,-31.8,-30,-28.6,-19.9,-27.6C-9.8,-26.6,-4.9,-27.7,3.3,-33.5C11.6,-39.2,23.1,-49.6,31.9,-49.9Z" transform="translate(100 100)" />
+              </svg>
+
+            </section>
+
+            <section data-background-gradient="linear-gradient(to top, #fff, #85abff)"
+            class="!h-screen !flex items-center justify-center py-16 flex-col relative slow-animation has-light-background">
+
+            <p class="font-p font-bold !text-3xl !mb-4 !mt-0" style="color: #063050 !important;">Votre avis compte ! Echangeons ensemble</p>
+
+            <svg class="absolute -z-9999" style="top: -75vh; left: 23vw; width: 150%; height: 150%;" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#2B59C3FF" d="M31.9,-49.9C40.6,-50.1,46.6,-40.2,54.3,-30.2C62,-20.2,71.5,-10.1,74.5,1.8C77.6,13.7,74.3,27.3,63.3,31.7C52.4,36.2,33.9,31.4,22.1,28.3C10.2,25.2,5.1,23.9,-3.3,29.6C-11.7,35.2,-23.3,47.9,-35.9,51.4C-48.5,55,-62,49.3,-66.4,39.2C-70.7,29.1,-66,14.5,-63.5,1.4C-61,-11.7,-60.9,-23.4,-53.1,-27.6C-45.4,-31.8,-30,-28.6,-19.9,-27.6C-9.8,-26.6,-4.9,-27.7,3.3,-33.5C11.6,-39.2,23.1,-49.6,31.9,-49.9Z" transform="translate(100 100)" />
+              </svg>
+
+              <h2 data-id="title" class="z-999 title rubik !text-8xl !w-screen whitespace-nowrap !mr-4 py-3" style="color: #f9fcff !important; 
+              -webkit-text-stroke: 2.8px #004aad; 
+              letter-spacing: -7px !important; 
+              line-height: 40px !important;
+              color: #f9fcff;">
+                  Make it Code <br> <span style="font-size: 2rem; font-family: 'Rubik One', sans-serif; -webkit-text-stroke: 2px #004aad; letter-spacing: -2px;">By Just'Goat</span>
+              </h2>
+              
+
+            <img class="absolute !max-w-70" style="top: 35px; left: -13vw;" src="/MIC_WEB/MIC_WEB/static/ring.png" alt="">
+
+
+            <img class="absolute !max-w-85" style="bottom: -30px; right: -9vw;" src="/MIC_WEB/MIC_WEB/static/robotTalk.png" alt="">
+
+
+
+            <img class="absolute hexagon" style="bottom: 15px; left: -15vw; transform: rotate(0.5turn) scaleX(-1) !important;" src="/MIC_WEB/MIC_WEB/static/hexagon.png" alt="">
+
+
             </section>
         </div>
     </div>
@@ -186,6 +762,30 @@
     Reveal.initialize({
         view: 'scroll',
         scrollProgress: true,
+        scrollSnap: 'proximity',
+        plugins: [RevealHighlight],
     });
+
+let elements = document.querySelectorAll('[data-id="phone"]');
+
+elements.forEach(element => {
+    element.addEventListener("click", function() {
+        
+        let video = document.querySelector(`.${element.id}`);
+
+        let videoText = document.querySelector(`.${element.id}-text`);
+
+        if (video.paused) {
+            video.play(); 
+            videoText.textContent = "Lecture";
+        } else {
+            video.pause(); 
+            videoText.textContent = "En pause";
+        }
+    
+    });
+});
+
+    console.log(videos);
 </script>
 </html>
