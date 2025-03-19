@@ -1,0 +1,35 @@
+body {
+    background-color: black;
+}
+
+.roboto{
+    font-family: "Roboto Condensed", sans-serif !important;
+}
+
+.sora{
+    font-family: "Sora", sans-serif !important;
+}
+
+.noto{
+    font-family: "Noto Sans", sans-serif !important;
+}
+
+.wheat{
+    color: wheat !important;
+}
+
+*{
+    color: #fffdf5 !important;
+}
+
+.slow-animation[data-auto-animate] {
+    transition: transform 3s cubic-bezier(0.860, 0.000, 0.070, 1.000);
+}
+
+.title {
+    transition: font-size 1s ease;
+}
+
+.border-color-pink{
+    border-color: #eea2ac !important;
+}
