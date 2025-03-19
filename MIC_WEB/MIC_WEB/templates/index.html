@@ -1,16 +1,16 @@
-
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/MIC_WEB/MIC_WEB/static/css/style_index.css">
+    <link rel="stylesheet" href="{% static '/css/style_index.css' %}">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="/MIC_WEB/MIC_WEB/static/node_modules/reveal.js/dist/reveal.css" />
-    <link rel="stylesheet" href="/MIC_WEB/MIC_WEB/static/node_modules/reveal.js/dist/theme/white.css" />
-    <script src="/MIC_WEB/MIC_WEB/static/node_modules/reveal.js/dist/reveal.js"></script>
-    <script src="/MIC_WEB/MIC_WEB/static/node_modules/reveal.js/plugin/highlight/highlight.js"></script>
-    <link rel="stylesheet" href="/MIC_WEB/MIC_WEB/static/node_modules/reveal.js/plugin/highlight/shades-of-purple.css" />
+    <link rel="stylesheet" href="{% static '/node_modules/reveal.js/dist/reveal.css' %}" />
+    <link rel="stylesheet" href="{% static '/node_modules/reveal.js/dist/theme/white.css' %}" />
+    <script src="{% static '/node_modules/reveal.js/dist/reveal.js' %}"></script>
+    <script src="{% static '/node_modules/reveal.js/plugin/highlight/highlight.js' %}"></script>
+    <link rel="stylesheet" href="{% static '/node_modules/reveal.js/plugin/highlight/shades-of-purple.css' %}" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://db.onlinewebfonts.com/c/ca79adee43dfd2eb108269be7a4a7ded?family=Core+Bandi+Face+W01+Regular" rel="stylesheet">
@@ -33,11 +33,16 @@
                     <path fill="#2B59C3FF" d="M58.2,-18.1C62.8,-4.8,45.2,16.6,28.8,25C12.5,33.4,-2.5,28.8,-14.3,20.1C-26.1,11.5,-34.5,-1.2,-31.6,-12.3C-28.7,-23.3,-14.3,-32.6,6.2,-34.6C26.8,-36.6,53.6,-31.4,58.2,-18.1Z" transform="translate(100 100)" />
                 </svg>
 
-                <img class="absolute hexagon" style="top: 15px; left: -12vw;" src="/MIC_WEB/MIC_WEB/static/hexagon.png" alt="">
+                <form method="post" action="{% url 'app:logout' %}">
+                    {% csrf_token %}
+                    <button type="submit">logout</button>
+                </form>
+
+                <img class="absolute hexagon" style="top: 15px; left: -12vw;" src="{% static 'hexagon.png' %}" alt="">
 
                 <!--<div class="absolute top-10 left-0 flex items-center justify-center">
                     <div class="rounded-full px-2 py-2" style="background: #1e4684">
-                        <img src="{% static 'monitor.png' %}" alt="" class="!m-0" style="width: 13px;">
+                        <img src="{% static 'monitor.png' %}' %}" alt="" class="!m-0" style="width: 13px;">
                     </div>
                     <p class="archivo !font-bold !text-lg" style="color: #063050 !important">Just'Goat</p>
                 </div>-->
@@ -48,7 +53,7 @@
                  <div class="absolute flex flex-col items-center justify-center gap-0 z-999" style="bottom: 35px; right: 430px;" >
                     <p class="font-p font-bold !text-xl !mb-0 !mt-0 !w-30" style="color: #063050 !important;">L'equipe</p>
                     <img class="!max-w-10 !m-0"  
-                    src="/MIC_WEB/MIC_WEB/static/down.png" 
+                    src="{% static 'down.png' %}" 
                     alt="">
                 </div>
 
@@ -84,13 +89,13 @@
                 <div class="absolute flex flex-col items-center justify-center gap-0 z-999" style="bottom: 35px; right: 400px;" >
                     <p class="font-p font-bold !text-xl !mb-0 !mt-0 !w-40" style="color: #063050 !important;">Techno & orga</p>
                     <img class="!max-w-10 !m-0"  
-                    src="/MIC_WEB/MIC_WEB/static/down.png" 
+                    src="{% static 'down.png' %}" 
                     alt="">
                 </div>
 
 
 
-                <img class="absolute hexagon" style="bottom: 15px; left: -15vw; transform: rotate(0.5turn) scaleX(-1) !important;" src="/MIC_WEB/MIC_WEB/static/hexagon.png" alt="">
+                <img class="absolute hexagon" style="bottom: 15px; left: -15vw; transform: rotate(0.5turn) scaleX(-1) !important;" src="{% static 'hexagon.png' %}" alt="">
 
 
                 <!--<div data-id="bg" class="!rounded-full p-10 absolute" style="background: #023047; width: 400%; height: 400%"></div>-->
@@ -110,7 +115,7 @@
                     </p>
                     <div class="flex flex-wrap gap-6 justify-center">
                         <div class="flex flex-col items-center">
-                            <img src="/MIC_WEB/MIC_WEB/static/Mathys.png" alt="" class="!m-0 inset-shadow-sm floating" style="max-width: 200px">
+                            <img src="{% static 'Mathys.png' %}" alt="" class="!m-0 inset-shadow-sm floating" style="max-width: 200px">
                             <div class="w-full h-1 bg-indigo-500 shadow-lg shadow-indigo-500/50"></div>
                             <h4 class="!text-3xl w-full text-left !ml-12 !mb-0 !mt-5 font-p"
                                 style="color: #063050 !important;">Mathys</h4>
@@ -118,7 +123,7 @@
                                style="color: #063050 !important;">Développeur</p>
                         </div>
                         <div class="flex flex-col items-center">
-                            <img src="/MIC_WEB/MIC_WEB/static/Ines.png" alt="" class="!m-0 inset-shadow-sm floating" style="max-width: 200px">
+                            <img src="{% static 'Ines.png' %}" alt="" class="!m-0 inset-shadow-sm floating" style="max-width: 200px">
                             <div class="w-full h-1 bg-indigo-500 shadow-lg shadow-indigo-500/50"></div>
                             <h4 class="!text-3xl w-full text-left !ml-12 !mb-0 !mt-5 font-p"
                                 style="color: #063050 !important;">Inès</h4>
@@ -126,7 +131,7 @@
                                style="color: #063050 !important;">Développeur</p>
                         </div>
                         <div class="flex flex-col items-center">
-                            <img src="/MIC_WEB/MIC_WEB/static/Clement.png" alt="" class="!m-0 inset-shadow-sm floating" style="max-width: 200px">
+                            <img src="{% static 'Clement.png' %}" alt="" class="!m-0 inset-shadow-sm floating" style="max-width: 200px">
                             <div class="w-full h-1 bg-indigo-500 shadow-lg shadow-indigo-500/50"></div>
                             <h4 class="!text-3xl w-full text-left !ml-12 !mb-0 !mt-5 font-p"
                                 style="color: #063050 !important;">Clément</h4>
@@ -134,7 +139,7 @@
                                style="color: #063050 !important;">Développeur</p>
                         </div>
                         <div class="flex flex-col items-center">
-                            <img src="/MIC_WEB/MIC_WEB/static/Mateis.png" alt="" class="!m-0 inset-shadow-sm floating" style="max-width: 200px">
+                            <img src="{% static 'Mateis.png' %}" alt="" class="!m-0 inset-shadow-sm floating" style="max-width: 200px">
                             <div class="w-full h-1 bg-indigo-500 shadow-lg shadow-indigo-500/50"></div>
                             <h4 class="!text-3xl w-full text-left !ml-12 !mb-0 !mt-5 font-p"
                                 style="color: #063050 !important;">Matéis</h4>
@@ -154,10 +159,10 @@
                 <!--<div data-id="bg" class="!rounded-full p-10 absolute right-0 bottom-30" style="background: #2B59C3FF;">
                 </div>-->
 
-                <img class="absolute hexagon" style="top: 15px; left: -15vw;" src="/MIC_WEB/MIC_WEB/static/hexagon.png" alt="">
+                <img class="absolute hexagon" style="top: 15px; left: -15vw;" src="{% static 'hexagon.png' %}" alt="">
 
 
-                <img class="absolute" style="bottom: -120px; left: -6vw; width: 550px; transform: rotate(-10deg);" src="/MIC_WEB/MIC_WEB/static/phoneBg.png" alt="">
+                <img class="absolute" style="bottom: -120px; left: -6vw; width: 550px; transform: rotate(-10deg);" src="{% static 'phoneBg.png' %}" alt="">
 
 
                 <h2 data-id="title" class="z-999 title archivo !text-5xl whitespace-nowrap
@@ -168,7 +173,7 @@
                 <div class="absolute flex flex-col items-center justify-center gap-0 z-999" style="bottom: 35px; right: 430px;" >
                     <p class="font-p font-bold !text-xl !mb-0 !mt-0 !w-30" style="color: #063050 !important;">Trello</p>
                     <img class="!max-w-10 !m-0"  
-                    src="/MIC_WEB/MIC_WEB/static/down.png" 
+                    src="{% static 'down.png' %}" 
                     alt="">
                 </div>
 
@@ -185,32 +190,32 @@
 
                 <div class="absolute right-20 top-50 flex gap-8 items-center">
                     <div class="flex flex-col items-center gap-4 justify-center">
-                        <img class="!mb-0" src="/MIC_WEB/MIC_WEB/static/flutter.png" alt="" style="max-width: 90px">
+                        <img class="!mb-0" src="{% static 'flutter.png' %}" alt="" style="max-width: 90px">
                         <p class="font-p !text-3xl !font-bold !m-0 px-2 rounded" style="color: #fff !important;
                             background: rgb(0, 74, 173, 0.21)">Flutter</p>
                     </div>
                     <div class="flex flex-col items-center gap-4 justify-center">
-                        <img class="!mb-0" src="/MIC_WEB/MIC_WEB/static/dart.png" alt="" style="max-width: 90px">
+                        <img class="!mb-0" src="{% static 'dart.png' %}" alt="" style="max-width: 90px">
                         <p class="font-p !text-3xl !font-bold !m-0 px-2 rounded" style="color: #fff !important;
                             background: rgb(0, 74, 173, 0.21)">Dart</p>
                     </div>
                     <div class="flex flex-col items-center gap-4 justify-center">
-                        <img class="!mb-0" src="/MIC_WEB/MIC_WEB/static/rive.png" alt="" style="max-width: 90px">
+                        <img class="!mb-0" src="{% static 'rive.png' %}" alt="" style="max-width: 90px">
                         <p class="font-p !text-3xl !font-bold !m-0 px-2 rounded" style="color: #fff !important;
                             background: rgb(0, 74, 173, 0.21)">Rive</p>
                     </div>
                     <div class="flex flex-col items-center gap-4 justify-center">
-                        <img class="!mb-0" src="/MIC_WEB/MIC_WEB/static/figma.png" alt="" style="max-width: 90px">
+                        <img class="!mb-0" src="{% static 'figma.png' %}" alt="" style="max-width: 90px">
                         <p class="font-p !text-3xl !font-bold !m-0 px-2 rounded" style="color: #fff !important;
                             background: rgb(0, 74, 173, 0.21)">Figma</p>
                     </div>
                     <div class="flex flex-col items-center gap-4 justify-center">
-                        <img class="!mb-0" src="/MIC_WEB/MIC_WEB/static/trello.png" alt="" style="max-width: 90px">
+                        <img class="!mb-0" src="{% static 'trello.png' %}" alt="" style="max-width: 90px">
                         <p class="font-p !text-3xl !font-bold !m-0 px-2 rounded" style="color: #fff !important;
                             background: rgb(0, 74, 173, 0.21)">Trello</p>
                     </div>
                     <div class="flex flex-col items-center gap-4 justify-center">
-                        <img class="!mb-0" src="/MIC_WEB/MIC_WEB/static/github.png" alt="" style="max-width: 90px">
+                        <img class="!mb-0" src="{% static 'github.png' %}" alt="" style="max-width: 90px">
                         <p class="font-p !text-3xl !font-bold !m-0 px-2 rounded" style="color: #fff !important;
                             background: rgb(0, 74, 173, 0.21)">GitHub</p>
                     </div>
@@ -248,7 +253,7 @@
                 </div>-->
 
 
-                <img class="absolute" style="top: -384px; left: -6vw; width: 550px; transform: rotate(-10deg);" src="/MIC_WEB/MIC_WEB/static/phoneBg.png" alt="">
+                <img class="absolute" style="top: -384px; left: -6vw; width: 550px; transform: rotate(-10deg);" src="{% static 'phoneBg.png' %}" alt="">
 
                 <div class="absolute" style="top: 10vh; right: 5vw;">                    
                     <p class="font-p font-bold !text-3xl !mb-10 !mt-0 !max-w-150" style="color: #063050 !important;">Suivi des tâches, gestion des priorités, 
@@ -260,7 +265,7 @@
                         <path fill="#2B59C3FF" d="M42.4,-75.9C54,-66.8,61.6,-53.4,58.8,-40C55.9,-26.7,42.5,-13.3,40.6,-1.1C38.7,11.1,48.3,22.3,50.1,33.8C51.9,45.3,45.9,57.3,36.3,67.6C26.6,77.9,13.3,86.6,1.1,84.6C-11,82.7,-22,70,-26.8,56.8C-31.5,43.6,-29.9,30,-36.8,20.4C-43.8,10.9,-59.3,5.4,-68.6,-5.3C-77.8,-16.1,-80.8,-32.3,-72.4,-39.3C-64,-46.4,-44.3,-44.4,-30.3,-52.1C-16.3,-59.7,-8.2,-77.1,3.6,-83.4C15.4,-89.7,30.9,-85,42.4,-75.9Z" transform="translate(100 100)" />
                     </svg>
 
-                    <img src="/MIC_WEB/MIC_WEB/static/trelloMakeItCode.png" class="!mt-40 !max-w-full !max-h-full rounded" alt="">
+                    <img src="{% static 'trelloMakeItCode.png' %}" class="!mt-40 !max-w-full !max-h-full rounded" alt="">
 
                     <svg class="absolute -z-999 -left-180 -bottom-90" width="100%" height="100%" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                         <path fill="#2B59C3FF" d="M43.3,-57.2C52.3,-44.2,52.9,-26.8,57.4,-9C62,8.9,70.4,27.2,66.1,41.4C61.8,55.7,44.7,65.8,26.9,70.9C9.2,76,-9.3,76,-21.1,67.6C-33,59.1,-38.4,42.2,-47.3,27.1C-56.2,12.1,-68.6,-1.1,-64.1,-8.6C-59.5,-16.1,-38,-17.8,-24.5,-30.1C-11,-42.3,-5.5,-65,5.9,-72C17.2,-79,34.4,-70.2,43.3,-57.2Z" transform="translate(100 100)" />
@@ -269,7 +274,7 @@
                       <div class="absolute flex flex-col items-center justify-center gap-0 z-999" style="bottom: 35px; right: -140px;" >
                         <p class="font-p font-bold !text-xl !mb-0 !mt-0 !w-30" style="color: #063050 !important;">GitHub</p>
                         <img class="!max-w-10 !m-0"  
-                        src="/MIC_WEB/MIC_WEB/static/down.png" 
+                        src="{% static 'down.png' %}" 
                         alt="">
                     </div>
 
@@ -297,12 +302,12 @@
                   </svg>
 
 
-                <img src="/MIC_WEB/MIC_WEB/static/GitHubPres.png" class="!mt-35 !max-w-full !max-h-full rounded" alt="">
+                <img src="{% static 'GitHubPres.png' %}" class="!mt-35 !max-w-full !max-h-full rounded" alt="">
 
                 <div class="absolute flex flex-col items-center justify-center gap-0 z-999" style="bottom: 35px; right: -140px;" >
                     <p class="font-p font-bold !text-xl !mb-0 !mt-0 !w-30" style="color: #fff !important;">Pourquoi notre solution</p>
                     <img class="!max-w-10 !m-0"  
-                    src="/MIC_WEB/MIC_WEB/static/down.png" 
+                    src="{% static 'down.png' %}" 
                     alt="">
                 </div>
 
@@ -322,7 +327,7 @@
               </svg>
 
 
-            <img src="/MIC_WEB/MIC_WEB/static/circuit.png" alt="" class="absolute -z-999 -left-44 -bottom-46 !max-w-60">
+            <img src="{% static 'circuit.png' %}" alt="" class="absolute -z-999 -left-44 -bottom-46 !max-w-60">
 
               <svg class="absolute" style="max-height: 310px; bottom: 35px; right: -120px;" xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="xMidYMid" width="1000" height="1440.423384410393" viewBox="0 0 1000 1440.423384410393">
                 <line class="line-element" stroke="#4f9ff5" stroke-width="100" x1="0" y1="0" x2="2.634079244597716" y2="1426.923407412044"></line>
@@ -344,15 +349,15 @@
             
             <h2 class="font-p absolute top-64" style="color: #063050 !important;">Pour apprendre à coder avec des projets concrets et oublier la théorie classique</h2>
             
-            <img src="/MIC_WEB/MIC_WEB/static/circuit.png" alt="" class="absolute -z-999 -left-44 -top-6 !max-w-60">
+            <img src="{% static 'circuit.png' %}" alt="" class="absolute -z-999 -left-44 -top-6 !max-w-60">
 
             
-            <img src="/MIC_WEB/MIC_WEB/static/robot.png" alt="" class="absolute -z-999 -right-40 -bottom-0 !max-w-90">
+            <img src="{% static 'robot.png' %}" alt="" class="absolute -z-999 -right-40 -bottom-0 !max-w-90">
 
             <div class="absolute flex flex-col items-center justify-center gap-0 z-999" style="bottom: 35px; right: 430px;" >
                 <p class="font-p font-bold !text-xl !mb-0 !mt-0 !w-30" style="color: #063050 !important;">Features</p>
                 <img class="!max-w-10 !m-0"  
-                src="/MIC_WEB/MIC_WEB/static/down.png" 
+                src="{% static 'down.png' %}" 
                 alt="">
             </div>
 
@@ -367,29 +372,29 @@
                 Explorez les fonctionnalités de notre application 
             </h2>
 
-            <img data-id="phone" id="vid-home" src="/MIC_WEB/MIC_WEB/static/phone.png" alt="" class="absolute z-999 !max-w-62 top-43">
+            <img data-id="phone" id="" src="{% static 'phone.png' %}" alt="" class="absolute z-999 !max-w-62 top-43">
 
-            <video data-id="login" src="/MIC_WEB/MIC_WEB/static/LoginVid.mov" class="absolute -z-999 !max-w-55 !max-h-112 top-50.5 rounded-xl"></video>
+            <video data-id="login" src="{% static 'LoginVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-112 top-50.5 rounded-xl"></video>
         
-            <video data-id="home" src="/MIC_WEB/MIC_WEB/static/Vid.mov" class="absolute -z-999 !max-w-55 !max-h-100 top-58 right-30 rounded-xl"></video>
+            <video data-id="home" src="{% static 'Vid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-100 top-58 right-30 rounded-xl"></video>
 
 
-            <video data-id="projects" src="/MIC_WEB/MIC_WEB/static/ProjectsVid.mov" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -right-23 rounded-xl"></video>
+            <video data-id="projects" src="{% static 'ProjectsVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -right-23 rounded-xl"></video>
 
             
-            <video data-id="code" src="/MIC_WEB/MIC_WEB/static/CodeVid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-70 rounded-xl"></video>
+            <video data-id="code" src="{% static 'CodeVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-70 rounded-xl"></video>
 
 
 
-            <video data-id="game" src="/MIC_WEB/MIC_WEB/static/GameVid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-130 rounded-xl"></video>
+            <video data-id="game" src="{% static 'GameVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-130 rounded-xl"></video>
 
-            <video data-id="game2" src="/MIC_WEB/MIC_WEB/static/GameVid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-70 rounded-xl"></video>
-
-
-            <video data-id="chat" src="/MIC_WEB/MIC_WEB/static/ChatVid.mov" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -left-23 rounded-xl"></video>
+            <video data-id="game2" src="{% static 'GameVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-70 rounded-xl"></video>
 
 
-            <video data-id="settings" src="/MIC_WEB/MIC_WEB/static/SettingsVid.mov" class="absolute -z-999 !max-w-55 !max-h-100 top-58 left-30 rounded-xl"></video>
+            <video data-id="chat" src="{% static 'ChatVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -left-23 rounded-xl"></video>
+
+
+            <video data-id="settings" src="{% static 'SettingsVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-100 top-58 left-30 rounded-xl"></video>
 
             <h3 data-id="phone-title" class="font-p absolute bottom-20" style="color: #063050 !important;">Page de connexion</h3>
 
@@ -398,36 +403,36 @@
             <section data-background-gradient="linear-gradient(to top, #fff, #85abff)"
             class="has-light-background !h-screen !flex items-center py-16 flex-col relative slow-animation" data-auto-animate>
 
-            <img data-id="phone" id="vid-login" src="/MIC_WEB/MIC_WEB/static/phone.png" alt="" class="absolute z-999 !w-80 top-32">
+            <img data-id="phone" id="vid-login" src="{% static 'phone.png' %}" alt="" class="absolute z-999 !w-80 top-32">
 
             <!--VIDEO DE LOGIN-->
             <!--VIDEO DE LOGIN-->
             <!--VIDEO DE LOGIN-->
             <!--VIDEO DE LOGIN-->
 
-            <video data-id="login" src="/MIC_WEB/MIC_WEB/static/LoginVid.mov" class="absolute -z-900 !max-w-70 !max-h-145 top-40 rounded-3xl vid-login" data-autoplay></video>
+            <video data-id="login" src="{% static 'LoginVid.mov' %}" class="absolute -z-900 !max-w-70 !max-h-145 top-40 rounded-3xl vid-login" data-autoplay></video>
 
             <p class="absolute archivo bottom-20 right-60 !text-lg vid-login-text">Lecture</p>
 
-            <video data-id="home" src="/MIC_WEB/MIC_WEB/static/Vid.mov" class="absolute -z-999 !max-w-55 !max-h-100 top-58 right-30 rounded-xl"></video>
+            <video data-id="home" src="{% static 'Vid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-100 top-58 right-30 rounded-xl"></video>
 
 
-            <video data-id="projects" src="/MIC_WEB/MIC_WEB/static/ProjectsVid.mov" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -right-23 rounded-xl"></video>
+            <video data-id="projects" src="{% static 'ProjectsVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -right-23 rounded-xl"></video>
 
             
-            <video data-id="code" src="/MIC_WEB/MIC_WEB/static/CodeVid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-70 rounded-xl"></video>
+            <video data-id="code" src="{% static 'CodeVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-70 rounded-xl"></video>
 
 
 
-            <video data-id="game" src="/MIC_WEB/MIC_WEB/static/GameVid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-130 rounded-xl"></video>
+            <video data-id="game" src="{% static 'GameVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-130 rounded-xl"></video>
 
-            <video data-id="game2" src="/MIC_WEB/MIC_WEB/static/GameVid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-70 rounded-xl"></video>
-
-
-            <video data-id="chat" src="/MIC_WEB/MIC_WEB/static/ChatVid.mov" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -left-23 rounded-xl"></video>
+            <video data-id="game2" src="{% static 'GameVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-70 rounded-xl"></video>
 
 
-            <video data-id="settings" src="/MIC_WEB/MIC_WEB/static/SettingsVid.mov" class="absolute -z-999 !max-w-55 !max-h-100 top-58 left-30 rounded-xl"></video>
+            <video data-id="chat" src="{% static 'ChatVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -left-23 rounded-xl"></video>
+
+
+            <video data-id="settings" src="{% static 'SettingsVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-100 top-58 left-30 rounded-xl"></video>
 
 
             <div class="absolute -z-950 !h-screen !w-screen !top-0" style="background: rgb(22, 25, 26, 0.9);"></div>
@@ -444,29 +449,29 @@
                 Explorez les fonctionnalités de notre application 
             </h2>
 
-            <img data-id="phone" id="vid-home" src="/MIC_WEB/MIC_WEB/static/phone.png" alt="" class="absolute z-999 !max-w-62 top-43">
+            <img data-id="phone" id="" src="{% static 'phone.png' %}" alt="" class="absolute z-999 !max-w-62 top-43">
 
-            <video data-id="login" src="/MIC_WEB/MIC_WEB/static/LoginVid.mov" class="absolute -z-999 !max-w-55 !max-h-100 top-58 left-30 rounded-xl"></video>
+            <video data-id="login" src="{% static 'LoginVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-100 top-58 left-30 rounded-xl"></video>
 
-            <video data-id="home" src="/MIC_WEB/MIC_WEB/static/Vid.mov" class="absolute -z-999 !max-w-55 !max-h-112 top-50.5 rounded-xl"></video>
+            <video data-id="home" src="{% static 'Vid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-112 top-50.5 rounded-xl"></video>
 
 
-            <video data-id="projects" src="/MIC_WEB/MIC_WEB/static/ProjectsVid.mov" class="absolute -z-999 !max-w-55 !max-h-100 top-58 right-30 rounded-xl"></video>
+            <video data-id="projects" src="{% static 'ProjectsVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-100 top-58 right-30 rounded-xl"></video>
 
             
-            <video data-id="code" src="/MIC_WEB/MIC_WEB/static/CodeVid.mov" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -right-23 rounded-xl"></video>
+            <video data-id="code" src="{% static 'CodeVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -right-23 rounded-xl"></video>
 
 
 
-            <video data-id="game" src="/MIC_WEB/MIC_WEB/static/GameVid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-70 rounded-xl"></video>
+            <video data-id="game" src="{% static 'GameVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-70 rounded-xl"></video>
 
-            <video data-id="game2" src="/MIC_WEB/MIC_WEB/static/GameVid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-130 rounded-xl"></video>
-
-
-            <video data-id="chat" src="/MIC_WEB/MIC_WEB/static/ChatVid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-70 rounded-xl"></video>
+            <video data-id="game2" src="{% static 'GameVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-130 rounded-xl"></video>
 
 
-            <video data-id="settings" src="/MIC_WEB/MIC_WEB/static/SettingsVid.mov" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -left-23 rounded-xl"></video>
+            <video data-id="chat" src="{% static 'ChatVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-70 rounded-xl"></video>
+
+
+            <video data-id="settings" src="{% static 'SettingsVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -left-23 rounded-xl"></video>
 
             <h3 data-id="phone-title" class="font-p absolute bottom-20" style="color: #063050 !important;">Accueil</h3>
 
@@ -475,39 +480,39 @@
             <section data-background-gradient="linear-gradient(to top, #fff, #85abff)"
             class="has-light-background !h-screen !flex items-center py-16 flex-col relative slow-animation" data-auto-animate>
 
-            <img data-id="phone" id="vid-home" src="/MIC_WEB/MIC_WEB/static/phone.png" alt="" class="absolute z-999 !w-80 top-32">
+            <img data-id="phone" id="vid-home" src="{% static 'phone.png' %}" alt="" class="absolute z-999 !w-80 top-32">
 
             <!--VIDEO DE L'ACCUEIL-->
             <!--VIDEO DE L'ACCUEIL-->
             <!--VIDEO DE L'ACCUEIL-->
             <!--VIDEO DE L'ACCUEIL-->
 
-            <video data-id="home" src="/MIC_WEB/MIC_WEB/static/Vid.mov" class="absolute -z-900 !max-w-70 !max-h-145 top-40 rounded-3xl vid-home" data-autoplay></video>
+            <video data-id="home" src="{% static 'Vid.mov' %}" class="absolute -z-900 !max-w-70 !max-h-145 top-40 rounded-3xl vid-home" data-autoplay></video>
 
             <p class="absolute archivo bottom-20 right-60 !text-lg vid-home-text">Lecture</p>
 
 
-            <video data-id="login" src="/MIC_WEB/MIC_WEB/static/LoginVid.mov" class="absolute -z-999 !max-w-55 !max-h-100 top-58 left-30 rounded-xl"></video>
+            <video data-id="login" src="{% static 'LoginVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-100 top-58 left-30 rounded-xl"></video>
 
 
-            <video data-id="projects" src="/MIC_WEB/MIC_WEB/static/ProjectsVid.mov" class="absolute -z-999 !max-w-55 !max-h-100 top-58 right-30 rounded-xl"></video>
+            <video data-id="projects" src="{% static 'ProjectsVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-100 top-58 right-30 rounded-xl"></video>
 
             
-            <video data-id="code" src="/MIC_WEB/MIC_WEB/static/CodeVid.mov" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -right-23 rounded-xl"></video>
+            <video data-id="code" src="{% static 'CodeVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -right-23 rounded-xl"></video>
 
 
 
-            <video data-id="game" src="/MIC_WEB/MIC_WEB/static/GameVid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-70 rounded-xl"></video>
+            <video data-id="game" src="{% static 'GameVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-70 rounded-xl"></video>
 
-            <video data-id="game2" src="/MIC_WEB/MIC_WEB/static/GameVid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-130 rounded-xl"></video>
-
-
-            <video data-id="chat" src="/MIC_WEB/MIC_WEB/static/ChatVid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-70 rounded-xl"></video>
-
-            <video data-id="chat2" src="/MIC_WEB/MIC_WEB/static/ChatVid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-130 rounded-xl"></video>
+            <video data-id="game2" src="{% static 'GameVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-130 rounded-xl"></video>
 
 
-            <video data-id="settings" src="/MIC_WEB/MIC_WEB/static/SettingsVid.mov" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -left-23 rounded-xl"></video>
+            <video data-id="chat" src="{% static 'ChatVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-70 rounded-xl"></video>
+
+            <video data-id="chat2" src="{% static 'ChatVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-130 rounded-xl"></video>
+
+
+            <video data-id="settings" src="{% static 'SettingsVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -left-23 rounded-xl"></video>
 
 
             <div class="absolute -z-950 !h-screen !w-screen !top-0" style="background: rgb(22, 25, 26, 0.9);"></div>
@@ -524,29 +529,29 @@
                 Explorez les fonctionnalités de notre application 
             </h2>
 
-            <img data-id="phone" id="vid-home" src="/MIC_WEB/MIC_WEB/static/phone.png" alt="" class="absolute z-999 !max-w-62 top-43">
+            <img data-id="phone" id="vid-home" src="{% static 'phone.png' %}" alt="" class="absolute z-999 !max-w-62 top-43">
             
 
-            <video data-id="home" src="/MIC_WEB/MIC_WEB/static/Vid.mov" class="absolute -z-999 !max-w-55 !max-h-100 top-58 left-30 rounded-xl"></video>
+            <video data-id="home" src="{% static 'Vid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-100 top-58 left-30 rounded-xl"></video>
 
-            <video data-id="login" src="/MIC_WEB/MIC_WEB/static/LoginVid.mov" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -left-23 rounded-xl"></video>
+            <video data-id="login" src="{% static 'LoginVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -left-23 rounded-xl"></video>
         
 
-            <video data-id="projects" src="/MIC_WEB/MIC_WEB/static/ProjectsVid.mov" class="absolute -z-999 !max-w-55 !max-h-112 top-50.5 rounded-xl"></video>
+            <video data-id="projects" src="{% static 'ProjectsVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-112 top-50.5 rounded-xl"></video>
 
-            <video data-id="code" src="/MIC_WEB/MIC_WEB/static/CodeVid.mov" class="absolute -z-999 !max-w-55 !max-h-100 top-58 right-30 rounded-xl"></video>
+            <video data-id="code" src="{% static 'CodeVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-100 top-58 right-30 rounded-xl"></video>
 
-            <video data-id="settings" src="/MIC_WEB/MIC_WEB/static/SettingsVid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-70 rounded-xl"></video>
+            <video data-id="settings" src="{% static 'SettingsVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-70 rounded-xl"></video>
 
-            <video data-id="settings2" src="/MIC_WEB/MIC_WEB/static/SettingsVid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-130 rounded-xl"></video>
+            <video data-id="settings2" src="{% static 'SettingsVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-130 rounded-xl"></video>
 
-            <video data-id="game" src="/MIC_WEB/MIC_WEB/static/GameVid.mov" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -right-23 rounded-xl"></video>
+            <video data-id="game" src="{% static 'GameVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -right-23 rounded-xl"></video>
 
-            <video data-id="game2" src="/MIC_WEB/MIC_WEB/static/GameVid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-130 rounded-xl"></video>
+            <video data-id="game2" src="{% static 'GameVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-130 rounded-xl"></video>
 
-            <video data-id="chat" src="/MIC_WEB/MIC_WEB/static/ChatVid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-130 rounded-xl"></video>
+            <video data-id="chat" src="{% static 'ChatVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-130 rounded-xl"></video>
 
-            <video data-id="chat2" src="/MIC_WEB/MIC_WEB/static/ChatVid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-70 rounded-xl"></video>
+            <video data-id="chat2" src="{% static 'ChatVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-70 rounded-xl"></video>
 
             <h3 data-id="phone-title" class="font-p absolute bottom-20" style="color: #063050 !important;">Page de projet</h3>
 
@@ -556,35 +561,35 @@
             class="!h-screen !flex items-center py-16 flex-col relative slow-animation has-light-background" data-auto-animate>
 
 
-            <img data-id="phone" id="vid-projets" src="/MIC_WEB/MIC_WEB/static/phone.png" alt="" class="absolute z-999 !w-80 top-32">            
+            <img data-id="phone" id="vid-projets" src="{% static 'phone.png' %}" alt="" class="absolute z-999 !w-80 top-32">            
         
 
             <!--VIDEO PROJETS-->
             <!--VIDEO PROJETS-->
             <!--VIDEO PROJETS-->
             <!--VIDEO PROJETS-->
-            <video data-id="projects" src="/MIC_WEB/MIC_WEB/static/ProjectsVid.mov" class="absolute -z-900 !max-w-70 !max-h-145 top-40 rounded-3xl vid-projets" data-autoplay></video>
+            <video data-id="projects" src="{% static 'ProjectsVid.mov' %}" class="absolute -z-900 !max-w-70 !max-h-145 top-40 rounded-3xl vid-projets" data-autoplay></video>
 
             <p class="absolute archivo bottom-20 right-60 !text-lg vid-projets-text">Lecture</p>
 
-            <video data-id="home" src="/MIC_WEB/MIC_WEB/static/Vid.mov" class="absolute -z-999 !max-w-55 !max-h-100 top-58 left-30 rounded-xl"></video>
+            <video data-id="home" src="{% static 'Vid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-100 top-58 left-30 rounded-xl"></video>
 
-            <video data-id="login" src="/MIC_WEB/MIC_WEB/static/LoginVid.mov" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -left-23 rounded-xl"></video>
+            <video data-id="login" src="{% static 'LoginVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -left-23 rounded-xl"></video>
     
 
-            <video data-id="code" src="/MIC_WEB/MIC_WEB/static/CodeVid.mov" class="absolute -z-999 !max-w-55 !max-h-100 top-58 right-30 rounded-xl"></video>
+            <video data-id="code" src="{% static 'CodeVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-100 top-58 right-30 rounded-xl"></video>
 
-            <video data-id="settings" src="/MIC_WEB/MIC_WEB/static/SettingsVid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-70 rounded-xl"></video>
+            <video data-id="settings" src="{% static 'SettingsVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-70 rounded-xl"></video>
 
-            <video data-id="settings2" src="/MIC_WEB/MIC_WEB/static/SettingsVid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-130 rounded-xl"></video>
+            <video data-id="settings2" src="{% static 'SettingsVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-130 rounded-xl"></video>
 
-            <video data-id="game" src="/MIC_WEB/MIC_WEB/static/GameVid.mov" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -right-23 rounded-xl"></video>
+            <video data-id="game" src="{% static 'GameVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -right-23 rounded-xl"></video>
 
-            <video data-id="game2" src="/MIC_WEB/MIC_WEB/static/GameVid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-130 rounded-xl"></video>
+            <video data-id="game2" src="{% static 'GameVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-130 rounded-xl"></video>
 
-            <video data-id="chat" src="/MIC_WEB/MIC_WEB/static/ChatVid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-130 rounded-xl"></video>
+            <video data-id="chat" src="{% static 'ChatVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-130 rounded-xl"></video>
 
-            <video data-id="chat2" src="/MIC_WEB/MIC_WEB/static/ChatVid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-70 rounded-xl"></video>
+            <video data-id="chat2" src="{% static 'ChatVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-70 rounded-xl"></video>
 
             <h3 data-id="phone-title" class="font-p absolute top-20" style="color: #fff !important;">Page de projets</h3>
 
@@ -600,28 +605,28 @@
                 Explorez les fonctionnalités de notre application 
             </h2>
 
-            <img data-id="phone" id="vid-home" src="/MIC_WEB/MIC_WEB/static/phone.png" alt="" class="absolute z-999 !max-w-62 top-43">
+            <img data-id="phone" id="vid-home" src="{% static 'phone.png' %}" alt="" class="absolute z-999 !max-w-62 top-43">
         
 
-            <video data-id="home" src="/MIC_WEB/MIC_WEB/static/Vid.mov" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -left-23 rounded-xl"></video>
+            <video data-id="home" src="{% static 'Vid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -left-23 rounded-xl"></video>
 
 
-            <video data-id="home2" src="/MIC_WEB/MIC_WEB/static/Vid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-130 rounded-xl"></video>
+            <video data-id="home2" src="{% static 'Vid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-130 rounded-xl"></video>
 
-            <video data-id="login" src="/MIC_WEB/MIC_WEB/static/LoginVid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-70 rounded-xl"></video>
+            <video data-id="login" src="{% static 'LoginVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-70 rounded-xl"></video>
         
 
-            <video data-id="projects" src="/MIC_WEB/MIC_WEB/static/ProjectsVid.mov" class="absolute -z-999 !max-w-55 !max-h-100 top-58 left-30 rounded-xl"></video>
+            <video data-id="projects" src="{% static 'ProjectsVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-100 top-58 left-30 rounded-xl"></video>
 
-            <video data-id="code" src="/MIC_WEB/MIC_WEB/static/CodeVid.mov" class="absolute -z-999 !max-w-55 !max-h-112 top-50.5 rounded-xl"></video>
+            <video data-id="code" src="{% static 'CodeVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-112 top-50.5 rounded-xl"></video>
 
-            <video data-id="settings" src="/MIC_WEB/MIC_WEB/static/SettingsVid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-130 rounded-xl"></video>
+            <video data-id="settings" src="{% static 'SettingsVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-130 rounded-xl"></video>
 
-            <video data-id="settings2" src="/MIC_WEB/MIC_WEB/static/SettingsVid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-70 rounded-xl"></video>
+            <video data-id="settings2" src="{% static 'SettingsVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-70 rounded-xl"></video>
 
-            <video data-id="game" src="/MIC_WEB/MIC_WEB/static/GameVid.mov" class="absolute -z-999 !max-w-55 !max-h-100 top-58 right-30 rounded-xl"></video>
+            <video data-id="game" src="{% static 'GameVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-100 top-58 right-30 rounded-xl"></video>
 
-            <video data-id="chat2" src="/MIC_WEB/MIC_WEB/static/ChatVid.mov" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -right-23 rounded-xl"></video>
+            <video data-id="chat2" src="{% static 'ChatVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -right-23 rounded-xl"></video>
 
             <h3 data-id="phone-title" class="font-p absolute bottom-20" style="color: #063050 !important;">Niveau de jeu</h3>
 
@@ -630,36 +635,36 @@
             <section data-background-gradient="linear-gradient(to top, #fff, #85abff)"
             class="!h-screen !flex items-center py-16 flex-col relative slow-animation has-light-background" data-auto-animate>
 
-            <img data-id="phone" id="vid-code" src="/MIC_WEB/MIC_WEB/static/phone.png" alt="" class="absolute z-999 !w-80 top-32">        
+            <img data-id="phone" id="vid-code" src="{% static 'phone.png' %}" alt="" class="absolute z-999 !w-80 top-32">        
 
             <!--VIDEO CODE-->
             <!--VIDEO CODE-->
             <!--VIDEO CODE-->
             <!--VIDEO CODE-->
 
-            <video data-id="code" src="/MIC_WEB/MIC_WEB/static/CodeVid.mov" class="absolute -z-900 !max-w-70 !max-h-145 top-40 rounded-3xl vid-code" data-autoplay></video>
+            <video data-id="code" src="{% static 'CodeVid.mov' %}" class="absolute -z-900 !max-w-70 !max-h-145 top-40 rounded-3xl vid-code" data-autoplay></video>
 
-            <video data-id="home" src="/MIC_WEB/MIC_WEB/static/Vid.mov" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -left-23 rounded-xl"></video>
+            <video data-id="home" src="{% static 'Vid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -left-23 rounded-xl"></video>
 
 
-            <video data-id="home2" src="/MIC_WEB/MIC_WEB/static/Vid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-130 rounded-xl"></video>
+            <video data-id="home2" src="{% static 'Vid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-130 rounded-xl"></video>
 
-            <video data-id="login" src="/MIC_WEB/MIC_WEB/static/LoginVid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-70 rounded-xl"></video>
+            <video data-id="login" src="{% static 'LoginVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-70 rounded-xl"></video>
 
-            <video data-id="login2" src="/MIC_WEB/MIC_WEB/static/LoginVid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-130 rounded-xl"></video>
+            <video data-id="login2" src="{% static 'LoginVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-130 rounded-xl"></video>
         
 
-            <video data-id="projects" src="/MIC_WEB/MIC_WEB/static/ProjectsVid.mov" class="absolute -z-999 !max-w-55 !max-h-100 top-58 left-30 rounded-xl"></video>
+            <video data-id="projects" src="{% static 'ProjectsVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-100 top-58 left-30 rounded-xl"></video>
 
-            <video data-id="code" src="/MIC_WEB/MIC_WEB/static/CodeVid.mov" class="absolute -z-999 !max-w-55 !max-h-112 top-50.5 rounded-xl"></video>
+            <video data-id="code" src="{% static 'CodeVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-112 top-50.5 rounded-xl"></video>
 
-            <video data-id="settings" src="/MIC_WEB/MIC_WEB/static/SettingsVid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-130 rounded-xl"></video>
+            <video data-id="settings" src="{% static 'SettingsVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-130 rounded-xl"></video>
 
-            <video data-id="settings2" src="/MIC_WEB/MIC_WEB/static/SettingsVid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-70 rounded-xl"></video>
+            <video data-id="settings2" src="{% static 'SettingsVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-70 rounded-xl"></video>
 
-            <video data-id="game" src="/MIC_WEB/MIC_WEB/static/GameVid.mov" class="absolute -z-999 !max-w-55 !max-h-100 top-58 right-30 rounded-xl"></video>
+            <video data-id="game" src="{% static 'GameVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-100 top-58 right-30 rounded-xl"></video>
 
-            <video data-id="chat2" src="/MIC_WEB/MIC_WEB/static/ChatVid.mov" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -right-23 rounded-xl"></video>
+            <video data-id="chat2" src="{% static 'ChatVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -right-23 rounded-xl"></video>
 
             <h3 data-id="phone-title" class="font-p absolute top-20" style="color: #fff !important;">Niveau de jeu</h3>
 
@@ -677,28 +682,28 @@
                 Explorez les fonctionnalités de notre application 
             </h2>
 
-            <img data-id="phone" id="vid-home" src="/MIC_WEB/MIC_WEB/static/phone.png" alt="" class="absolute z-999 !max-w-62 top-43">
+            <img data-id="phone" id="vid-home" src="{% static 'phone.png' %}" alt="" class="absolute z-999 !max-w-62 top-43">
 
 
-            <video data-id="home" src="/MIC_WEB/MIC_WEB/static/Vid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-70 rounded-xl"></video>
+            <video data-id="home" src="{% static 'Vid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-70 rounded-xl"></video>
 
 
-            <video data-id="home2" src="/MIC_WEB/MIC_WEB/static/Vid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-130 rounded-xl"></video>
+            <video data-id="home2" src="{% static 'Vid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-130 rounded-xl"></video>
 
-            <video data-id="login" src="/MIC_WEB/MIC_WEB/static/LoginVid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-130 rounded-xl"></video>
+            <video data-id="login" src="{% static 'LoginVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-130 rounded-xl"></video>
 
-            <video data-id="login2" src="/MIC_WEB/MIC_WEB/static/LoginVid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-70 rounded-xl"></video>
+            <video data-id="login2" src="{% static 'LoginVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-70 rounded-xl"></video>
         
 
-            <video data-id="projects" src="/MIC_WEB/MIC_WEB/static/ProjectsVid.mov" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -left-23 rounded-xl"></video>
+            <video data-id="projects" src="{% static 'ProjectsVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -left-23 rounded-xl"></video>
 
-            <video data-id="code" src="/MIC_WEB/MIC_WEB/static/CodeVid.mov" class="absolute -z-999 !max-w-55 !max-h-100 top-58 left-30 rounded-xl"></video>
+            <video data-id="code" src="{% static 'CodeVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-100 top-58 left-30 rounded-xl"></video>
 
-            <video data-id="settings2" src="/MIC_WEB/MIC_WEB/static/SettingsVid.mov" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -right-23 rounded-xl"></video>
+            <video data-id="settings2" src="{% static 'SettingsVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -right-23 rounded-xl"></video>
 
-            <video data-id="game" src="/MIC_WEB/MIC_WEB/static/GameVid.mov" class="absolute -z-999 !max-w-55 !max-h-112 top-50.5 rounded-xl"></video>
+            <video data-id="game" src="{% static 'GameVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-112 top-50.5 rounded-xl"></video>
 
-            <video data-id="chat2" src="/MIC_WEB/MIC_WEB/static/ChatVid.mov" class="absolute -z-999 !max-w-55 !max-h-100 top-58 right-30 rounded-xl"></video>
+            <video data-id="chat2" src="{% static 'ChatVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-100 top-58 right-30 rounded-xl"></video>
 
             <h3 data-id="phone-title" class="font-p absolute bottom-20" style="color: #063050 !important;">Page de jeu</h3>
 
@@ -708,33 +713,33 @@
             class="!h-screen !flex items-center py-16 flex-col relative slow-animation has-light-background" data-auto-animate>
 
 
-            <img data-id="phone" id="vid-game" src="/MIC_WEB/MIC_WEB/static/phone.png" alt="" class="absolute z-999 !w-80 top-32">
+            <img data-id="phone" id="vid-game" src="{% static 'phone.png' %}" alt="" class="absolute z-999 !w-80 top-32">
 
 
-            <video data-id="home" src="/MIC_WEB/MIC_WEB/static/Vid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-70 rounded-xl"></video>
+            <video data-id="home" src="{% static 'Vid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-70 rounded-xl"></video>
 
 
-            <video data-id="home2" src="/MIC_WEB/MIC_WEB/static/Vid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-130 rounded-xl"></video>
+            <video data-id="home2" src="{% static 'Vid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-130 rounded-xl"></video>
 
-            <video data-id="login" src="/MIC_WEB/MIC_WEB/static/LoginVid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-130 rounded-xl"></video>
+            <video data-id="login" src="{% static 'LoginVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-130 rounded-xl"></video>
 
-            <video data-id="login2" src="/MIC_WEB/MIC_WEB/static/LoginVid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-70 rounded-xl"></video>
+            <video data-id="login2" src="{% static 'LoginVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-70 rounded-xl"></video>
         
 
-            <video data-id="projects" src="/MIC_WEB/MIC_WEB/static/ProjectsVid.mov" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -left-23 rounded-xl"></video>
+            <video data-id="projects" src="{% static 'ProjectsVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -left-23 rounded-xl"></video>
 
-            <video data-id="code" src="/MIC_WEB/MIC_WEB/static/CodeVid.mov" class="absolute -z-999 !max-w-55 !max-h-100 top-58 left-30 rounded-xl"></video>
+            <video data-id="code" src="{% static 'CodeVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-100 top-58 left-30 rounded-xl"></video>
 
-            <video data-id="settings2" src="/MIC_WEB/MIC_WEB/static/SettingsVid.mov" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -right-23 rounded-xl"></video>
+            <video data-id="settings2" src="{% static 'SettingsVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -right-23 rounded-xl"></video>
 
-            <video data-id="chat2" src="/MIC_WEB/MIC_WEB/static/ChatVid.mov" class="absolute -z-999 !max-w-55 !max-h-100 top-58 right-30 rounded-xl"></video>
+            <video data-id="chat2" src="{% static 'ChatVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-100 top-58 right-30 rounded-xl"></video>
             
 
             <!--VIDEO GAME-->
             <!--VIDEO GAME-->
             <!--VIDEO GAME-->
             <!--VIDEO GAME-->
-            <video data-id="game" src="/MIC_WEB/MIC_WEB/static/GameVid.mov" class="absolute -z-900 !max-w-70 !max-h-145 top-40 rounded-3xl vid-game" data-autoplay></video>
+            <video data-id="game" src="{% static 'GameVid.mov' %}" class="absolute -z-900 !max-w-70 !max-h-145 top-40 rounded-3xl vid-game" data-autoplay></video>
 
             <div class="absolute -z-950 !h-screen !w-screen !top-0" style="background: rgb(22, 25, 26, 0.9);"></div>
 
@@ -752,32 +757,32 @@
                 Explorez les fonctionnalités de notre application 
             </h2>
 
-            <img data-id="phone" id="vid-home" src="/MIC_WEB/MIC_WEB/static/phone.png" alt="" class="absolute z-999 !max-w-62 top-43">
+            <img data-id="phone" id="vid-home" src="{% static 'phone.png' %}" alt="" class="absolute z-999 !max-w-62 top-43">
             
 
-            <video data-id="home" src="/MIC_WEB/MIC_WEB/static/Vid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-130 rounded-xl"></video>
+            <video data-id="home" src="{% static 'Vid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-130 rounded-xl"></video>
 
-            <video data-id="home2" src="/MIC_WEB/MIC_WEB/static/Vid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-70 rounded-xl"></video>
+            <video data-id="home2" src="{% static 'Vid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-70 rounded-xl"></video>
 
-            <video data-id="login" src="/MIC_WEB/MIC_WEB/static/LoginVid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-130 rounded-xl"></video>
+            <video data-id="login" src="{% static 'LoginVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-130 rounded-xl"></video>
 
-            <video data-id="login2" src="/MIC_WEB/MIC_WEB/static/LoginVid.mov" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -right-23 rounded-xl"></video>
+            <video data-id="login2" src="{% static 'LoginVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -right-23 rounded-xl"></video>
 
-            <video data-id="projects" src="/MIC_WEB/MIC_WEB/static/ProjectsVid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-70 rounded-xl"></video>
-
-
-            <video data-id="settings2" src="/MIC_WEB/MIC_WEB/static/SettingsVid.mov" class="absolute -z-999 !max-w-55 !max-h-100 top-58 right-30 rounded-xl"></video>
+            <video data-id="projects" src="{% static 'ProjectsVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-70 rounded-xl"></video>
 
 
-            <video data-id="projects2" src="/MIC_WEB/MIC_WEB/static/ProjectsVid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-130 rounded-xl"></video>
+            <video data-id="settings2" src="{% static 'SettingsVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-100 top-58 right-30 rounded-xl"></video>
 
-            <video data-id="code" src="/MIC_WEB/MIC_WEB/static/CodeVid.mov" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -left-23 rounded-xl"></video>
+
+            <video data-id="projects2" src="{% static 'ProjectsVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-130 rounded-xl"></video>
+
+            <video data-id="code" src="{% static 'CodeVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -left-23 rounded-xl"></video>
             
-            <video data-id="code2" src="/MIC_WEB/MIC_WEB/static/CodeVid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-130 rounded-xl"></video>
+            <video data-id="code2" src="{% static 'CodeVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-130 rounded-xl"></video>
 
-            <video data-id="game" src="/MIC_WEB/MIC_WEB/static/GameVid.mov" class="absolute -z-999 !max-w-55 !max-h-100 top-58 left-30 rounded-xl"></video>
+            <video data-id="game" src="{% static 'GameVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-100 top-58 left-30 rounded-xl"></video>
 
-            <video data-id="chat2" src="/MIC_WEB/MIC_WEB/static/ChatVid.mov" class="absolute -z-999 !max-w-55 !max-h-112 top-50.5 rounded-xl"></video>
+            <video data-id="chat2" src="{% static 'ChatVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-112 top-50.5 rounded-xl"></video>
 
 
             <h3 data-id="phone-title" class="font-p absolute bottom-20" style="color: #063050 !important;">Chat & Amis</h3>
@@ -787,36 +792,36 @@
             <section data-background-gradient="linear-gradient(to top, #fff, #85abff)"
             class="!h-screen !flex items-center py-16 flex-col relative slow-animation has-light-background" data-auto-animate>
 
-            <img data-id="phone" id="vid-chat" src="/MIC_WEB/MIC_WEB/static/phone.png" alt="" class="absolute z-999 !w-80 top-32">            
+            <img data-id="phone" id="vid-chat" src="{% static 'phone.png' %}" alt="" class="absolute z-999 !w-80 top-32">            
 
-            <video data-id="home" src="/MIC_WEB/MIC_WEB/static/Vid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-130 rounded-xl"></video>
+            <video data-id="home" src="{% static 'Vid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-130 rounded-xl"></video>
 
-            <video data-id="home2" src="/MIC_WEB/MIC_WEB/static/Vid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-70 rounded-xl"></video>
+            <video data-id="home2" src="{% static 'Vid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-70 rounded-xl"></video>
 
-            <video data-id="login" src="/MIC_WEB/MIC_WEB/static/LoginVid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-130 rounded-xl"></video>
+            <video data-id="login" src="{% static 'LoginVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-130 rounded-xl"></video>
 
-            <video data-id="login2" src="/MIC_WEB/MIC_WEB/static/LoginVid.mov" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -right-23 rounded-xl"></video>
+            <video data-id="login2" src="{% static 'LoginVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -right-23 rounded-xl"></video>
 
-            <video data-id="projects" src="/MIC_WEB/MIC_WEB/static/ProjectsVid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-70 rounded-xl"></video>
-
-
-            <video data-id="settings2" src="/MIC_WEB/MIC_WEB/static/SettingsVid.mov" class="absolute -z-999 !max-w-55 !max-h-100 top-58 right-30 rounded-xl"></video>
+            <video data-id="projects" src="{% static 'ProjectsVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-70 rounded-xl"></video>
 
 
-            <video data-id="projects2" src="/MIC_WEB/MIC_WEB/static/ProjectsVid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-130 rounded-xl"></video>
+            <video data-id="settings2" src="{% static 'SettingsVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-100 top-58 right-30 rounded-xl"></video>
 
-            <video data-id="code" src="/MIC_WEB/MIC_WEB/static/CodeVid.mov" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -left-23 rounded-xl"></video>
+
+            <video data-id="projects2" src="{% static 'ProjectsVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-130 rounded-xl"></video>
+
+            <video data-id="code" src="{% static 'CodeVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -left-23 rounded-xl"></video>
             
-            <video data-id="code2" src="/MIC_WEB/MIC_WEB/static/CodeVid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-130 rounded-xl"></video>
+            <video data-id="code2" src="{% static 'CodeVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-130 rounded-xl"></video>
 
-            <video data-id="game" src="/MIC_WEB/MIC_WEB/static/GameVid.mov" class="absolute -z-999 !max-w-55 !max-h-100 top-58 left-30 rounded-xl"></video>
+            <video data-id="game" src="{% static 'GameVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-100 top-58 left-30 rounded-xl"></video>
 
 
             <!--VIDEO CHAT-->
             <!--VIDEO CHAT-->
             <!--VIDEO CHAT-->
             <!--VIDEO CHAT-->
-            <video data-id="chat2" src="/MIC_WEB/MIC_WEB/static/ChatVid.mov" class="absolute -z-900 !max-w-70 !max-h-145 top-40 rounded-3xl vid-chat" data-autoplay></video>
+            <video data-id="chat2" src="{% static 'ChatVid.mov' %}" class="absolute -z-900 !max-w-70 !max-h-145 top-40 rounded-3xl vid-chat" data-autoplay></video>
 
             <p class="absolute archivo bottom-20 right-60 !text-lg vid-chat-text">Lecture</p>
 
@@ -834,30 +839,30 @@
                 Explorez les fonctionnalités de notre application 
             </h2>
 
-            <img data-id="phone" src="/MIC_WEB/MIC_WEB/static/phone.png" alt="" class="absolute z-999 !max-w-62 top-43">
+            <img data-id="phone" src="{% static 'phone.png' %}" alt="" class="absolute z-999 !max-w-62 top-43">
         
 
-            <video data-id="home" src="/MIC_WEB/MIC_WEB/static/Vid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-130 rounded-xl"></video>
+            <video data-id="home" src="{% static 'Vid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-130 rounded-xl"></video>
 
-            <video data-id="home2" src="/MIC_WEB/MIC_WEB/static/Vid.mov" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -right-23 rounded-xl"></video>
+            <video data-id="home2" src="{% static 'Vid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -right-23 rounded-xl"></video>
 
-            <video data-id="login" src="/MIC_WEB/MIC_WEB/static/LoginVid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-130 rounded-xl"></video>
+            <video data-id="login" src="{% static 'LoginVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-130 rounded-xl"></video>
 
-            <video data-id="login2" src="/MIC_WEB/MIC_WEB/static/LoginVid.mov" class="absolute -z-999 !max-w-55 !max-h-100 top-58 right-30 rounded-xl"></video>
+            <video data-id="login2" src="{% static 'LoginVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-100 top-58 right-30 rounded-xl"></video>
 
-            <video data-id="projects" src="/MIC_WEB/MIC_WEB/static/ProjectsVid.mov" class="absolute -z-999 !max-w-55 !max-h-100 top-58 -left-130 rounded-xl"></video>
+            <video data-id="projects" src="{% static 'ProjectsVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-100 top-58 -left-130 rounded-xl"></video>
 
-            <video data-id="projects2" src="/MIC_WEB/MIC_WEB/static/ProjectsVid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-70 rounded-xl"></video>
+            <video data-id="projects2" src="{% static 'ProjectsVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-70 rounded-xl"></video>
             
-            <video data-id="code" src="/MIC_WEB/MIC_WEB/static/CodeVid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-70 rounded-xl"></video>
+            <video data-id="code" src="{% static 'CodeVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-70 rounded-xl"></video>
 
-            <img data-id="settings" src="/MIC_WEB/MIC_WEB/static/settings.png" alt="" class="absolute -z-999 !max-w-55 !max-h-76 top-67 -left-100 rounded-xl">
+            <img data-id="settings" src="{% static 'settings.png' %}" alt="" class="absolute -z-999 !max-w-55 !max-h-76 top-67 -left-100 rounded-xl">
 
-            <video data-id="settings2" src="/MIC_WEB/MIC_WEB/static/SettingsVid.mov" class="absolute -z-999 !max-w-55 !max-h-112 top-50.5 rounded-xl"></video>
+            <video data-id="settings2" src="{% static 'SettingsVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-112 top-50.5 rounded-xl"></video>
 
-            <video data-id="game" src="/MIC_WEB/MIC_WEB/static/GameVid.mov" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -left-23 rounded-xl"></video>
+            <video data-id="game" src="{% static 'GameVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -left-23 rounded-xl"></video>
 
-            <video data-id="chat2" src="/MIC_WEB/MIC_WEB/static/ChatVid.mov" class="absolute -z-999 !max-w-55 !max-h-100 top-58 left-30 rounded-xl"></video>
+            <video data-id="chat2" src="{% static 'ChatVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-100 top-58 left-30 rounded-xl"></video>
 
 
 
@@ -868,30 +873,30 @@
             <section data-background-gradient="linear-gradient(to top, #fff, #85abff)"
             class="!h-screen !flex items-center py-16 flex-col relative slow-animation has-light-background" data-auto-animate>
 
-            <img data-id="phone" id="vid-settings" src="/MIC_WEB/MIC_WEB/static/phone.png" alt="" class="absolute z-999 !w-80 top-32">
+            <img data-id="phone" id="vid-settings" src="{% static 'phone.png' %}" alt="" class="absolute z-999 !w-80 top-32">
         
 
-            <video data-id="home" src="/MIC_WEB/MIC_WEB/static/Vid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-130 rounded-xl"></video>
+            <video data-id="home" src="{% static 'Vid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-130 rounded-xl"></video>
 
-            <video data-id="home2" src="/MIC_WEB/MIC_WEB/static/Vid.mov" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -right-23 rounded-xl"></video>
+            <video data-id="home2" src="{% static 'Vid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -right-23 rounded-xl"></video>
 
-            <video data-id="login" src="/MIC_WEB/MIC_WEB/static/LoginVid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-130 rounded-xl"></video>
+            <video data-id="login" src="{% static 'LoginVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-130 rounded-xl"></video>
 
-            <video data-id="login2" src="/MIC_WEB/MIC_WEB/static/LoginVid.mov" class="absolute -z-999 !max-w-55 !max-h-100 top-58 right-30 rounded-xl"></video>
+            <video data-id="login2" src="{% static 'LoginVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-100 top-58 right-30 rounded-xl"></video>
 
-            <video data-id="projects" src="/MIC_WEB/MIC_WEB/static/ProjectsVid.mov" class="absolute -z-999 !max-w-55 !max-h-100 top-58 -left-130 rounded-xl"></video>
+            <video data-id="projects" src="{% static 'ProjectsVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-100 top-58 -left-130 rounded-xl"></video>
 
-            <video data-id="projects2" src="/MIC_WEB/MIC_WEB/static/ProjectsVid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-70 rounded-xl"></video>
+            <video data-id="projects2" src="{% static 'ProjectsVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -right-70 rounded-xl"></video>
             
-            <video data-id="code" src="/MIC_WEB/MIC_WEB/static/CodeVid.mov" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-70 rounded-xl"></video>
+            <video data-id="code" src="{% static 'CodeVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-76 top-71 -left-70 rounded-xl"></video>
 
-            <img data-id="settings" src="/MIC_WEB/MIC_WEB/static/settings.png" alt="" class="absolute -z-999 !max-w-55 !max-h-76 top-67 -left-100 rounded-xl">
+            <img data-id="settings" src="{% static 'settings.png' %}" alt="" class="absolute -z-999 !max-w-55 !max-h-76 top-67 -left-100 rounded-xl">
 
-            <video data-id="game" src="/MIC_WEB/MIC_WEB/static/GameVid.mov" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -left-23 rounded-xl"></video>
+            <video data-id="game" src="{% static 'GameVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-88 top-65 -left-23 rounded-xl"></video>
 
-            <video data-id="chat2" src="/MIC_WEB/MIC_WEB/static/ChatVid.mov" class="absolute -z-999 !max-w-55 !max-h-100 top-58 left-30 rounded-xl"></video>
+            <video data-id="chat2" src="{% static 'ChatVid.mov' %}" class="absolute -z-999 !max-w-55 !max-h-100 top-58 left-30 rounded-xl"></video>
 
-            <video data-id="settings2" src="/MIC_WEB/MIC_WEB/static/SettingsVid.mov" class="absolute -z-900 !max-w-70 !max-h-145 top-40 rounded-3xl vid-settings" data-autoplay></video>
+            <video data-id="settings2" src="{% static 'SettingsVid.mov' %}" class="absolute -z-900 !max-w-70 !max-h-145 top-40 rounded-3xl vid-settings" data-autoplay></video>
                         
             <!--VIDEO DE SETTINGS-->
             <!--VIDEO DE SETTINGS-->
@@ -918,13 +923,13 @@
             <div class="absolute flex flex-col items-center justify-center gap-0 z-999" style="bottom: 35px; right: -130px;" >
                 <p class="font-p font-bold !text-xl !mb-0 !mt-0" style="color: #063050 !important;">Niveau de jeu</p>
                 <img class="!max-w-10 !m-0"  
-                src="/MIC_WEB/MIC_WEB/static/down.png" 
+                src="{% static 'down.png' %}" 
                 alt="">
             </div>
 
             <div class="flex gap-20 items-center justify-center">            
                 <div class="flex flex-col gap-4 items-center">
-                    <img class="!max-h-120 rounded-lg !m-0" src="/MIC_WEB/MIC_WEB/static/HomePage.png" alt="">            
+                    <img class="!max-h-120 rounded-lg !m-0" src="{% static 'HomePage.png' %}" alt="">            
                     <h2 data-id="title" class="z-999 title font-p !text-3xl
                     !font-black py-3 w-full !mb-0" style="color: #063050 !important;">
                         Accueil
@@ -1077,9 +1082,9 @@
                       getlvlBadge(int level){
                         String path = 'assets/icons/';
                         if(level >= 0 || level <= 5){
-                          return '${path}BronzeIcon.png';
+                          return '${path}BronzeIcon.png' %}';
                         }
-                        return '${path}BronzeIcon.png';
+                        return '${path}BronzeIcon.png' %}';
                       }
                     
                     
@@ -1124,7 +1129,7 @@
                       return CircleAvatar(
                         backgroundImage:_avatarImage != null
                             ? MemoryImage(_avatarImage!)
-                            : AssetImage('assets/icons/logo.png')
+                            : AssetImage('assets/icons/logo.png' %}')
                                 as ImageProvider,
                         radius: 45,
                       );
@@ -1416,20 +1421,20 @@
             <div class="absolute flex flex-col items-center justify-center gap-0 z-999" style="bottom: 35px; right: -130px;" >
                 <p class="font-p font-bold !text-xl !mb-0 !mt-0 !w-30" style="color: #063050 !important;">Jeu du Pendu</p>
                 <img class="!max-w-10 !m-0"  
-                src="/MIC_WEB/MIC_WEB/static/down.png" 
+                src="{% static 'down.png' %}" 
                 alt="">
             </div>
 
             <div class="absolute flex flex-col items-center justify-center gap-0 z-999" style="top: 35px; right: -130px;" >
                 <img class="!max-w-12 !m-0"  
-                src="/MIC_WEB/MIC_WEB/static/up-arrow.png" 
+                src="{% static 'up-arrow.png' %}" 
                 alt="">
                 <p class="font-p font-bold !text-xl !mb-0 !mt-0 !w-30" style="color: #063050 !important;">Accueil</p>
             </div>
 
             <div class="flex gap-20 items-center justify-center">            
                 <div class="flex flex-col gap-4 items-center">
-                    <img class="!max-h-120 rounded-lg !m-0" src="/MIC_WEB/MIC_WEB/static/GamePage.png" alt="">            
+                    <img class="!max-h-120 rounded-lg !m-0" src="{% static 'GamePage.png' %}" alt="">            
                     <h2 data-id="title" class="z-999 title font-p !text-3xl
                     !font-black py-3 w-full !mb-0" style="color: #063050 !important;">
                         Niveau de jeu
@@ -1577,20 +1582,20 @@
             <div class="absolute flex flex-col items-center justify-center gap-0 z-999" style="bottom: 35px; right: -130px;" >
                 <p class="font-p font-bold !text-xl !mb-0 !mt-0 !w-30" style="color: #063050 !important;">Obstacles & solution</p>
                 <img class="!max-w-10 !m-0"  
-                src="/MIC_WEB/MIC_WEB/static/down.png" 
+                src="{% static 'down.png' %}" 
                 alt="">
             </div>
 
             <div class="absolute flex flex-col items-center justify-center gap-0 z-999" style="top: 35px; right: -130px;" >
                 <img class="!max-w-12 !m-0"  
-                src="/MIC_WEB/MIC_WEB/static/up-arrow.png" 
+                src="{% static 'up-arrow.png' %}" 
                 alt="">
                 <p class="font-p font-bold !text-xl !mb-0 !mt-0 !w-30" style="color: #063050 !important;">Niveau de jeu</p>
             </div>
 
             <div class="flex gap-20 items-center justify-center">            
                 <div class="flex flex-col gap-4 items-center">
-                    <img class="!max-h-120 rounded-lg !m-0" src="/MIC_WEB/MIC_WEB/static/PenduPage.png" alt="">            
+                    <img class="!max-h-120 rounded-lg !m-0" src="{% static 'PenduPage.png' %}" alt="">            
                     <h2 data-id="title" class="z-999 title font-p !text-3xl
                     !font-black py-3 w-full !mb-0" style="color: #063050 !important;">
                         Jeu du pendu
@@ -1802,7 +1807,7 @@
        <!--<div data-id="bg" class="!rounded-full p-10 absolute right-0 bottom-30" style="background: #2B59C3FF;">
        </div>-->
 
-       <img class="absolute hexagon" style="top: 15px; right: -15vw; transform: scaleX(-1) !important" src="/MIC_WEB/MIC_WEB/static/hexagon.png" alt="">
+       <img class="absolute hexagon" style="top: 15px; right: -15vw; transform: scaleX(-1) !important" src="{% static 'hexagon.png' %}" alt="">
 
 
        <h2 data-id="title" class="z-999 title archivo !text-5xl whitespace-nowrap
@@ -1813,7 +1818,7 @@
        <div class="absolute flex flex-col items-center justify-center gap-0 z-999" style="bottom: 35px; right: 430px;" >
            <p class="font-p font-bold !text-xl !mb-0 !mt-0 !w-30" style="color: #063050 !important;">Évolutions</p>
            <img class="!max-w-10 !m-0"  
-           src="/MIC_WEB/MIC_WEB/static/down.png" 
+           src="{% static 'down.png' %}" 
            alt="">
        </div>
 
@@ -1829,7 +1834,7 @@
 
        <div class="absolute -left-25 top-50 flex gap-8 items-center justify-center">
            <div class="flex flex-col items-center gap-4 justify-center">
-               <img class="!mb-0" src="/MIC_WEB/MIC_WEB/static/robot2.png" alt="" style="max-width: 300px">
+               <img class="!mb-0" src="{% static 'robot2.png' %}" alt="" style="max-width: 300px">
                <p class="font-p !text-3xl !m-0 px-2 !pr-8 rounded" style="color: #063050 !important;">Apprendre flutter</p>
            </div>
        </div>
@@ -1837,13 +1842,13 @@
        <div class="absolute left-65 top-75 flex gap-8 items-center justify-center">
         <div class="flex flex-col items-center gap-4 justify-center">
             <p class="font-p !text-3xl !m-0 px-2 !pr-8 rounded" style="color: #063050 !important;">Allier ergonomie et pédagogie</p>
-            <img class="!mb-0" src="/MIC_WEB/MIC_WEB/static/3phones.png" alt="" style="max-width: 300px">
+            <img class="!mb-0" src="{% static '3phones.png' %}" alt="" style="max-width: 300px">
         </div>
     </div>
 
     <div class="absolute -right-25 top-50 flex gap-8 items-center justify-center">
         <div class="flex flex-col items-center gap-4 justify-center">
-            <img class="!mb-0" src="/MIC_WEB/MIC_WEB/static/webLoop.png" alt="" style="max-width: 300px">
+            <img class="!mb-0" src="{% static 'webLoop.png' %}" alt="" style="max-width: 300px">
             <p class="font-p !text-3xl !m-0 px-2 !pr-8 rounded" style="color: #063050 !important;">Gérer les dépendances</p>
         </div>
     </div>
@@ -1856,7 +1861,7 @@
             <!--<div data-id="bg" class="!rounded-full p-10 absolute right-0 bottom-30" style="background: #2B59C3FF;">
             </div>-->
 
-            <img class="absolute hexagon" style="top: 15px; right: -15vw; transform: scaleX(-1) !important" src="/MIC_WEB/MIC_WEB/static/hexagon.png" alt="">
+            <img class="absolute hexagon" style="top: 15px; right: -15vw; transform: scaleX(-1) !important" src="{% static 'hexagon.png' %}" alt="">
 
 
             <h2 data-id="title" class="z-999 title archivo !text-5xl whitespace-nowrap
@@ -1867,7 +1872,7 @@
             <div class="absolute flex flex-col items-center justify-center gap-0 z-999" style="bottom: 35px; right: 430px;" >
             <p class="font-p font-bold !text-xl !mb-0 !mt-0 !w-30" style="color: #063050 !important;">Conclusion</p>
             <img class="!max-w-10 !m-0"  
-            src="/MIC_WEB/MIC_WEB/static/down.png" 
+            src="{% static 'down.png' %}" 
             alt="">
             </div>
 
@@ -1884,14 +1889,14 @@
             <div class="absolute -left-20 top-65 flex gap-8 items-center justify-center">
             <div class="flex flex-col items-center gap-4 justify-center">
                 <p class="font-p !text-3xl !m-0 px-2 !pr-8 rounded" style="color: #063050 !important;">Monétiser notre <br> application</p>
-                <img class="!mb-0 !mt-0" src="/MIC_WEB/MIC_WEB/static/monetisation.png" alt="" style="max-width: 300px">
+                <img class="!mb-0 !mt-0" src="{% static 'monetisation.png' %}" alt="" style="max-width: 300px">
             </div>
             </div>
 
             <div class="absolute left-100 top-125 flex gap-8 items-center justify-center">
             <div class="flex flex-col items-center gap-4 justify-center relative">
-                <img class="!mb-5 absolute z-999 -top-60 left-15" src="/MIC_WEB/MIC_WEB/static/android.png" alt="" style="max-height: 300% !important; max-width: 300% !important;    ">
-                <img class="!mb-5 absolute -top-50 -left-5" src="/MIC_WEB/MIC_WEB/static/Appstore.png" alt="" 
+                <img class="!mb-5 absolute z-999 -top-60 left-15" src="{% static 'android.png' %}" alt="" style="max-height: 300% !important; max-width: 300% !important;    ">
+                <img class="!mb-5 absolute -top-50 -left-5" src="{% static 'Appstore.png' %}" alt="" 
                 style="max-height: 200% !important; max-width: 200% !important; transform: rotate(10deg);">
                 <p class="font-p !text-3xl !m-0 px-2 rounded" style="color: #063050 !important;">Diversifier nos <br> plateformes</p>
             </div>
@@ -1900,7 +1905,7 @@
             <div class="absolute -right-20 top-65 flex gap-8 items-center justify-center">
             <div class="flex flex-col items-center gap-0 justify-center">
                 <p class="font-p !text-3xl !m-0 px-2 rounded" style="color: #063050 !important;">Développer de <br> nouveaux projets</p>
-            <img class="!mb-0 !mt-0" src="/MIC_WEB/MIC_WEB/static/phoneProjectEvolution.png" alt="" style="max-width: 200px">
+            <img class="!mb-0 !mt-0" src="{% static 'phoneProjectEvolution.png' %}" alt="" style="max-width: 200px">
             </div>
             </div>
 
@@ -1921,7 +1926,7 @@
             <div class="absolute flex flex-col items-center justify-center gap-0 z-999" style="bottom: 35px; right: 430px;" >
                 <p class="font-p font-bold !text-xl !mb-0 !mt-0 !w-30" style="color: #063050 !important;">Fin</p>
                 <img class="!max-w-10 !m-0"  
-                src="/MIC_WEB/MIC_WEB/static/down.png" 
+                src="{% static 'down.png' %}" 
                 alt="">
             </div>
             
@@ -1952,14 +1957,14 @@
               </h2>
               
 
-            <img class="absolute !max-w-70" style="top: 35px; left: -13vw;" src="/MIC_WEB/MIC_WEB/static/ring.png" alt="">
+            <img class="absolute !max-w-70" style="top: 35px; left: -13vw;" src="{% static 'ring.png' %}" alt="">
 
 
-            <img class="absolute !max-w-85" style="bottom: -30px; right: -9vw;" src="/MIC_WEB/MIC_WEB/static/robotTalk.png" alt="">
+            <img class="absolute !max-w-85" style="bottom: -30px; right: -9vw;" src="{% static 'robotTalk.png' %}" alt="">
 
 
 
-            <img class="absolute hexagon" style="bottom: 15px; left: -15vw; transform: rotate(0.5turn) scaleX(-1) !important;" src="/MIC_WEB/MIC_WEB/static/hexagon.png" alt="">
+            <img class="absolute hexagon" style="bottom: 15px; left: -15vw; transform: rotate(0.5turn) scaleX(-1) !important;" src="{% static 'hexagon.png' %}" alt="">
 
 
             </section>
