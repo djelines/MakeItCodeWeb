@@ -33,11 +33,6 @@
                     <path fill="#2B59C3FF" d="M58.2,-18.1C62.8,-4.8,45.2,16.6,28.8,25C12.5,33.4,-2.5,28.8,-14.3,20.1C-26.1,11.5,-34.5,-1.2,-31.6,-12.3C-28.7,-23.3,-14.3,-32.6,6.2,-34.6C26.8,-36.6,53.6,-31.4,58.2,-18.1Z" transform="translate(100 100)" />
                 </svg>
 
-                <form method="post" action="{% url 'app:logout' %}">
-                    {% csrf_token %}
-                    <button type="submit">logout</button>
-                </form>
-
                 <img class="absolute hexagon" style="top: 15px; left: -12vw;" src="{% static 'hexagon.png' %}" alt="">
 
                 <!--<div class="absolute top-10 left-0 flex items-center justify-center">
@@ -307,7 +302,7 @@
                 <div class="absolute flex flex-col items-center justify-center gap-0 z-999" style="bottom: 35px; right: -140px;" >
                     <p class="font-p font-bold !text-xl !mb-0 !mt-0 !w-30" style="color: #fff !important;">Pourquoi notre solution ?</p>
                     <img class="!max-w-10 !m-0"  
-                    src="{% static 'down.png" 
+                    src="{% static 'down.png' %}" 
                     style="filter: brightness(0) saturate(100%) invert(100%) sepia(95%) saturate(1%) hue-rotate(52deg) brightness(104%) contrast(100%);"
                     alt="">
                 </div>
@@ -2054,6 +2049,11 @@
 
             <img class="absolute !max-w-95" style="bottom: 120px; right: 5vw;" src="{% static 'robotTalk.png' %}" alt="">
 
+
+            <form class="absolute bottom-10" method="post" action="{% url 'app:logout' %}">
+              {% csrf_token %}
+              <button class="archivo !text-sm" style="color: #063050;" type="submit">Se déconnecter</button>
+          </form>
 
             <img class="absolute hexagon" style="bottom: 15px; left: -15vw; transform: rotate(0.5turn) scaleX(-1) !important;" src="{% static 'hexagon.png' %}" alt="">
 
